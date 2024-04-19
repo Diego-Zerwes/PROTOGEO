@@ -111,20 +111,23 @@ nav {
   section#serviços .titulo_serviço{
     height: 10vh;
     font-size: 10px;
-    color: #322;
-    
-    
+    color: #F34412;
+  }
+
+  section#serviços .subtitulo_serviço{
+    height: 10vh;
+    font-size: 40px;
+    color: #222;
   }
 
   section#serviços .titulo_cartao{
     font-size: 18px;
-    align-items: center;
+    text-align: center;
     padding: 1rem;
   }
 
   section#serviços .subtitulo_cartao{
     font-size: 10px;
-    align-items: center;
     margin: 0rem 3rem;
     text-align: center;
     color: #525252;
@@ -178,7 +181,7 @@ nav {
   .serviço_card .serviço_conteudo .serviço_cartao button{
     border: 2px solid #FFC700;
     outline: none;
-    padding: 0.35rem 1.35rem;
+    padding: 0.35rem 1.5rem;
     font-size: 17px;
     background: #FFC700;
     color: #72601F;
@@ -212,6 +215,30 @@ nav {
     -moz-transform: scale(1.0);
       -webkit-transform: scale(1.0);
       transform: scale(1.03);
+  }
+
+  #orcamento{
+    border: solid;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .orcamento-imagem{
+    height: 220px;
+    width: 80%;
+    background:linear-gradient(to top,#B45600 0%,#FFC700 100%);
+    position: relative;
+    border-radius: 10px;
+    
+  }
+  .orcamento-imagem img{
+    position:absolute;
+    top:-27%;
+    left: 5%;
+    
   }
   .sobre {
     display: flex;
@@ -498,9 +525,9 @@ nav {
     }
   
     section#serviços .titulo_serviço{
-      height: 20vh;
-      font-size: 32px;
-      color: #222;
+      height: 10vh;
+    font-size: 25px;
+    color: #F34412;
       
     }
   
@@ -594,9 +621,9 @@ nav {
     }
   
     section#serviços .titulo_serviço{
-      height: 20vh;
-      font-size: 60px;
-      color: #222;
+    height: 10vh;
+    font-size: 40px;
+    color: #F34412;
       
     }
   
