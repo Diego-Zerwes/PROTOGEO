@@ -31,11 +31,7 @@ nav {
   .menu li > a {
     display: flex;
     padding: 0.5rem 1rem;
-<<<<<<< HEAD
     color: #444;
-=======
-    color: black;
->>>>>>> 190c558c28d431b4c21d2bd1f2af09cb7faceb30
     text-decoration: none;
     align-items: center;
     
@@ -104,11 +100,7 @@ nav {
     font-size: 46px;
     width: 150%;
     justify-content: flex-start;
-<<<<<<< HEAD
     color: #141414;
-=======
-    color: #222;
->>>>>>> 190c558c28d431b4c21d2bd1f2af09cb7faceb30
   }
   
   .logo img {
