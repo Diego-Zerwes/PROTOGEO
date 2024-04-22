@@ -197,11 +197,11 @@ nav {
   }
   
   .serviço_card .serviço_conteudo{
-    height: 200px;
-    display: flex;
+     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around;height: 200px;
+   
   }
   
   .serviço_card .serviço_conteudo .serviço_cartao button{
