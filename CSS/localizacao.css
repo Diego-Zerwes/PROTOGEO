@@ -133,6 +133,22 @@ nav {
     margin-bottom: 2%;
 }
 
+
+.titulo-form h1{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  color: #B45600;
+}
+
 form{
   width: 50%;
   background-color: #FFC700;
