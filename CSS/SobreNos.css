@@ -1,0 +1,496 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+nav {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+
+}
+
+.menu a:hover {
+  background: #db8708;
+  border-radius: 10px;
+}
+
+.menu li>a {
+  display: flex;
+  padding: 0.5rem 1rem;
+  color: #444;
+  text-decoration: none;
+  align-items: center;
+
+}
+
+/* .menu img{
+    display: block;
+  } */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  height: 60px;
+  padding: 1rem;
+  display: flex;
+  z-index: 100;
+  transform: translateY(70%);
+  border-radius: 15px;
+  /* margin-top: 2%; */
+  background: #f4f4f4;
+  transition: all 0.2s ease;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.decoracao {
+  margin: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  /* transform: translateY(-565%); */
+  /* align-content: flex-start; */
+  /* align-items: flex-start; */
+  border-radius: 0px 0px 50px 50px;
+  background: linear-gradient(90deg, #B55700 50%, #FFC700 100%);
+}
+
+.imagem_de_fundo {
+
+  top: 0;
+  background-image: url("../imagens/background-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 70vh;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0rem 0rem;
+}
+
+.slogan {
+
+  color: #eee;
+  width: 150%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.slogan p {
+  display: flex;
+  font-size: 46px;
+  width: 150%;
+  justify-content: flex-start;
+  color: #141414;
+}
+
+.logo img {
+  width: 350px;
+  height: 50px;
+  flex-shrink: 0;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.logo:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.colored {
+  /* background: #333; */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  /* position: relative !important; */
+  transform: translateY(5%);
+}
+
+/*aqui*/
+#menu-baixo {
+  height: 450px;
+  width: 100%;
+  display: flex;
+  background-color: #1e1e1e;
+  color: #fff;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.logo-rodape {
+  display: flex;
+}
+
+.sobre .container-sobre {
+  display: flex;
+}
+
+.container {
+  display: flex;
+}
+
+.menu-links {
+  display: flex;
+  color: #fff;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-links ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-links ul a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.titulo-rodape {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-transform: none;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.titulo-rodape ul {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+footer .rodape {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 10px;
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 550px) {
+  .slogan {
+    font-size: 64px;
+    color: #eee;
+    width: 50%;
+  }
+
+  .container-sobre {
+    flex-direction: row;
+  }
+
+  .paragrafo3 {
+    width: 95%;
+    margin-left: 2%;
+    margin-top: 10px;
+    color: #451179;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .container-sobre img {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    margin-top: 10%;
+    margin-left: 2%;
+
+  }
+
+  .txt-sobre {
+    margin-top: 10%;
+  }
+}
+
+/* NOTBOOK PEQUENO */
+@media only screen and (min-width: 992px) {
+  .container-slogan {
+    display: flex;
+    justify-content: center;
+  }
+
+  .slogan {
+    display: flex;
+    align-items: center;
+    font-size: 64px;
+    color: #eee;
+    width: 100%;
+  }
+
+  .slogan p {
+    margin: 10% 10%;
+  }
+
+  .slogan img {
+    width: 340px;
+    height: 240px;
+    flex-shrink: 0;
+    margin-top: 40px;
+    border-radius: 15px;
+  }
+}
+
+/* NOTBOOK MEDIO */
+@media only screen and (min-width: 1440px) {
+  .slogan {
+    font-size: 64px;
+    color: #eee;
+    width: 50%;
+  }
+
+  section#serviços .titulo_serviço {
+    height: 10vh;
+    font-size: 25px;
+    color: #F34412;
+
+  }
+
+  section#container-cliente .portifolio-cliente {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  section#container-cliente .portifolio-cliente .cliente {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  .cliente {
+    width: 24%;
+  }
+
+  section#conteiner-cliente .portifolio-cliente .cliente .imagem-cliente img {
+    width: 200%;
+    height: 100%;
+  }
+
+  .flex {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+  }
+
+  .container-sobre {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .container-sobre img {
+    width: 30%;
+    height: 5%;
+    display: flex;
+    border-radius: 5%;
+  }
+
+  .txt-sobre h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .txt-sobre {
+    gap: 10px;
+    margin-left: 3%;
+    padding: 5%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .slogan {
+    font-size: 64px;
+    color: #eee;
+    width: 50%;
+  }
+
+  section#menu-baixo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 250px;
+    justify-content: space-evenly;
+
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-links {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin-top: 2%;
+  }
+
+  .titulo-rodape {
+    display: flex;
+
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  nav {
+    transform: translateY(100%);
+  }
+
+  .container-slogan {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .slogan {
+    display: flex;
+    align-items: center;
+    font-size: 64px;
+    color: #eee;
+    width: 100%;
+  }
+
+  .slogan p {
+    width: 40%;
+    margin: 10% 10%;
+  }
+
+  .slogan img {
+    width: 540px;
+    height: 340px;
+    flex-shrink: 0;
+    margin-top: 40px;
+    border-radius: 15px;
+  }
+
+  section#menu-baixo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 250px;
+    justify-content: space-evenly;
+
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-links {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+  }
+
+  .titulo-rodape {
+    display: flex;
+
+    justify-content: flex-end;
+  }
+}
+
+.SobreNos {
+
+  background: #f7f7f7f7;
+}
+
+
+
+.fundoCinza {
+  display: flex;
+  background: #f7f7f7;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 8% 1%;
+}
+
+.textoExplicativo {
+  width: 35%;
+  text-align: justify;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.imagemsobre img {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.436);
+}
+.fundoBranco{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 8% 1%;
+  background:#f7e9b436;
+}
+.textoEquipe{
+  width: 35%;
+  text-align: justify;
+  padding: 10px;
+  font-size: 24px;
+}
+.imagemEquipe img {
+  width: 80%;
+  border-radius:  10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.436);
+}
+.titulo_equipe{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+p{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
