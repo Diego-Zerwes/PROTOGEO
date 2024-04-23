@@ -7,13 +7,309 @@
 /*TESTE*/
 
 nav {
-  height: 100%;
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-  position: relative;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .menu{
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      
+  }
+  
+  .menu a:hover{
+    background: #db8708;
+    border-radius: 10px;
+  }
+  
+  .menu li > a {
+    display: flex;
+    padding: 0.5rem 1rem;
+    color: #444;
+    text-decoration: none;
+    align-items: center;
+    
+  }
+  /* .menu img{
+    display: block;
+  } */
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    z-index: 100;
+    transform: translateY(70%);
+    border-radius: 15px;
+    /* margin-top: 2%; */
+     background: #f4f4f4; 
+    transition: all 0.2s ease;
+  }
+  
+  .nav-toggle{
+    display: none;
+  }
+  .decoracao{
+    margin: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    /* transform: translateY(-565%); */
+    /* align-content: flex-start; */
+    /* align-items: flex-start; */
+    border-radius: 0px 0px 50px 50px;
+    background: linear-gradient(90deg, #B55700 50%, #FFC700 100%);
+  }
+  .imagem_de_fundo {
+    
+    top: 0;
+    background-image: url("../imagens/background-header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    width: 100%;
+    height: 70vh;
+    display: flex;
+  
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0rem 0rem;
+  }
+  .slogan {
+    
+    color: #eee;
+    width: 150%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .slogan p{
+    display: flex;
+    font-size: 46px;
+    width: 150%;
+    justify-content: flex-start;
+    color: #141414;
+  }
+  
+  .logo img {
+    width: 350px;
+    height: 50px;
+    flex-shrink: 0; 
+       -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; 
+  }
+  .logo:hover img{
+    -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+  }
+  
+  .colored {
+    /* background: #333; */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    /* position: relative !important; */
+    transform: translateY(5%);
+  }
+  section#serviços {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0rem;
+    font-family: poppins;
+  } 
+  
+  section#serviços .titulo_serviço{
+    height: 10vh;
+    font-size: 10px;
+    color: #F34412;
+  }
+
+  section#serviços .subtitulo_serviço{
+    height: 10vh;
+    font-size: 40px;
+    color: #222;
+  }
+
+  section#serviços .titulo_cartao{
+    font-size: 18px;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  section#serviços .subtitulo_cartao{
+    font-size: 10px;
+    margin: 0rem 3rem;
+    text-align: center;
+    color: #525252;
+  }
+    
+  section#serviços .cartão-serviços{
+    width: 100%;
+  
+      display: flex;
+      justify-content: space-evenly;
+  
+  }
+  
+  
+  section#serviços .cartão-serviços .serviço_card{
+    height: fit-content;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #ddd;
+      box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.15);
+      background: white;
+      font-size: 12px;
+      
+  
+  }
+  
+  section#serviços .cartão-serviços .serviço_card .serviço-imagem{
+    height: 50%;
+      width: 100%;
+      position: relative;
+  }
+  
+  section#serviços .cartão-serviços .serviço_card .serviço-imagem img{
+    width: 100%;
+      height: 100%;
+      object-fit: contain;
+      
+  }
+  
+  .serviço_card .serviço_conteudo{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;height: 200px;
+   
+  }
+  
+  .serviço_card .serviço_conteudo .serviço_cartao button{
+    border: 2px solid #FFC700;
+    outline: none;
+    padding: 0.35rem 1.5rem;
+    font-size: 17px;
+    background: #FFC700;
+    color: #72601F;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
+    text-align: center;
+    box-shadow: 0px 2px 10px rbga(4, 4, 4, 0.125);
+    font-family: poppins;
+  }
+  
+  .serviço_card .serviço_conteudo .serviço_cartao button:hover{
+    background: transparent;
+    color: #FFC700;
+    transform: scale(1.02);
+  }
+  .cartão-serviços .serviço_fundo{
+    display:  flex;
+    flex-wrap: wrap ;
+    align-items: center;
+    justify-content: center;
+    gap: 130px;
+  }
+  .serviço_card{
+    -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; 
+  }
+  
+  .serviço_card:hover {
+    -moz-transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+      transform: scale(1.03);
+  }
+
+  #orcamento{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .orcamento-imagem{
+    height: 220px;
+    width: 70%;
+    background:linear-gradient(to top,#B45600 0%,#FFC700 100%);
+    position: relative;
+    border-radius: 15px;
+    
+  }
+  .orcamento-imagem img{
+    position:absolute;
+    top:-27.5%;
+    left: 5%;
+  }
+
+  .texto-orcamento{
+    position:relative;
+    display: flex;
+    top:8.5%;
+    left: 45%;
+    flex-wrap: wrap;
+    height: 90%;
+    width: 50%;
+    font-family: poppins;
+  }
+
+  .titulo-orcamento {
+    position:relative;
+    font-size: 26px;
+    color: #EDEDED;
+  }
+
+  .subtitulo-orcamento {
+    position:relative;
+    font-size: 18px;
+    color: #EDEDED;
+    height: 30%;
+    width: 100%;
+  }
+  .texto-orcamento button {
+    height: 15%;
+    width: 40%;
+    font-size: 18px;
+    border: 2px solid #FFC700;
+    outline: none;
+    padding: 0.10rem 1.5rem;
+    font-size: 17px;
+    background: #FFC700;
+    color: #72601F;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
+    text-align: center;
+    box-shadow: 0px 2px 10px rbga(4, 4, 4, 0.125);
+    
+  }
+.texto-orcamento button:hover{
+  background: white;
+    color: #FFC700;
+    transform: scale(1.02);
 }
 
 .menu {
