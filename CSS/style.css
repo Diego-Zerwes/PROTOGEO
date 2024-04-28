@@ -1,6 +1,13 @@
+html{
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
 * {
   margin: 0;
   padding: 0;
+  right: 0;
+
   box-sizing: border-box;
 }
 
@@ -842,6 +849,7 @@ footer .rodape {
   }
 
   .slogan img {
+    
     width: 60%;
     border-radius: 15px;
   }
@@ -851,17 +859,19 @@ footer .rodape {
     display: flex;
   }
   #orcamento .orcamento-imagem {
+  
     display: flex;
     width: 80%;
-    height: 80%;
+    height: 70%;
     /* justify-content: center; */
     flex-direction: column;
   }
   #orcamento .orcamento-imagem img {
-    max-width: 350px;
-    height: 220px;
-    transform: translateY(30%) translateX(15%);
-    /* display: none; */
+    position: absolute;
+    max-width: 280px;
+    height: 200px;
+    transform: translateY(30%) translateX(1%);
+    display: none;
   }
   #orcamento .orcamento-imagem.texto-orcamento {
     display: flex;
@@ -871,9 +881,11 @@ footer .rodape {
   .texto-orcamento {
     flex-direction: column;
     justify-content: center;
-    transform: translateX(-30%) translateY(15%);
+    transform: translateX(-50%) translateY(-10%);
+    
   }
   .texto-orcamento button {
+    margin-top: 100px;
     width: 100%;
   }
 }
