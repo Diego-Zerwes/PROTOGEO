@@ -803,7 +803,7 @@ footer .rodape {
 /* Celular */
 @media only screen and (max-width: 550px) {
   nav{
-    width: 85%;
+    width: auto;
   }
   .menu li > a {
     display: none;
