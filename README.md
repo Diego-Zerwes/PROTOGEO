@@ -4,7 +4,7 @@ Projeto integrador
 
 <p align="center">
 
-  <img href="./imagens/logo.pnj" alt=" Projeto integrador" src="" width="200" height="200">
+  <img href="/imagens/logo.pnj" alt=" Projeto integrador" src="" width="200" height="200">
 
 
 </p>
