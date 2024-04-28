@@ -833,7 +833,9 @@ footer .rodape {
   }
 
   .slogan p {
-    width: 30% ;
+    width: 50% ;
+    font-size: 36px;
+    margin-top: 5px;
   }
 
   .slogan img {
