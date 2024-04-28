@@ -827,9 +827,12 @@ footer .rodape {
   }
 
   .slogan {
+    width: 100%;
+    height: 40vh;
     flex-direction: column-reverse;
-    margin-top: 15%;
-    margin-left: 12%;
+     margin-top: 15%;
+    justify-content: center;
+    align-items: center;
   }
 
   .slogan p {
