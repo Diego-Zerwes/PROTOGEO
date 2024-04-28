@@ -802,6 +802,9 @@ footer .rodape {
 
 /* Celular */
 @media only screen and (max-width: 550px) {
+  nav{
+    width: 85%;
+  }
   .menu li > a {
     display: none;
   }
@@ -826,15 +829,15 @@ footer .rodape {
   .slogan {
     flex-direction: column-reverse;
     margin-top: 15%;
-    margin-left: 15%;
+    margin-left: 12%;
   }
 
   .slogan p {
-    width: 40%;
+    width: 30% ;
   }
 
   .slogan img {
-    width: 45%;
+    width: 50%;
     border-radius: 15px;
   }
   #orcamento {
