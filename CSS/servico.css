@@ -245,72 +245,223 @@ nav {
   
   /* Celular */
   @media only screen and (max-width: 550px) {
-    .menu li > a{
+    .menu li > a {
       display: none;
     }
   
-    .nav-toggle svg{
+    .nav-toggle svg {
       width: 32px;
       height: 32px;
     }
   
-    .nav-toggle{
+    .nav-toggle {
       display: block;
+    }
+    #header .logo img {
+      max-width: 80%;
+    }
+  
+    .imagem_de_fundo {
+      width: 100%;
+      display: flex;
+    }
+  
+    .slogan {
+      flex-direction: column-reverse;
+      margin-top: 15%;
+      margin-left: 15%;
+    }
+  
+    .slogan p {
+      width: 40%;
+    }
+  
+    .slogan img {
+      width: 45%;
+      border-radius: 15px;
+    }
+   
+    #container-servico_1  {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #container-servico_2  {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    #container-servico_3  {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #container-servico_4  {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    #container-servico_5  {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #container-servico_6  {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    #container-servico_7  {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #container-servico_8  {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .descricao_servico{
+      width: 100%;
+      margin-top: 15px;
     }
   }
   /* Tablet */
   @media only screen and (min-width: 550px) {
+    .menu li > a {
+      display: none;
+    }
+    .nav-toggle svg {
+      width: 32px;
+      height: 32px;
+    }
+  
+    .nav-toggle {
+      display: block;
+    }
+  
     .slogan {
       font-size: 64px;
       color: #eee;
       width: 50%;
+      gap: 20px;
+      transform: translateX(20%) translateY(80%);
     }
   
-    .container-sobre{
-      flex-direction:row;
+    .slogan img {
+      max-width: 320px;
     }
-  .paragrafo3{
-   width: 95%;
-   margin-left: 2%;
-   margin-top: 10px;
-   color:#451179;
-    font-size: 20px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-    .container-sobre img{
-      width: 50%;
-      height: 50%;
+  
+    #container-servico_1,#container-servico_3, #container-servico_5,#container-servico_7    {
       display: flex;
-      margin-top: 10%;
-      margin-left: 2%;
-  
+      flex-direction: column;
     }
-    .txt-sobre{
-      margin-top: 10%;
+
+    #container-servico_2,  #container-servico_4, #container-servico_6, #container-servico_8  {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .descricao_servico{
+      width: 100%;
+      margin-top: 15px;
+      font-size: 18px;
     }
   }
   /* NOTBOOK PEQUENO */
   @media only screen and (min-width: 992px) {
-    .container-slogan{
+    .menu li > a {
+      display: flex;
+      padding: 0.5rem 1rem;
+      color: #444;
+      text-decoration: none;
+      align-items: center;
+    }
+  
+    .nav-toggle {
+      display: none;
+    }
+  
+    .container-slogan {
       display: flex;
       justify-content: center;
     }
     .slogan {
-      display: flex;
-      align-items: center;
       font-size: 64px;
       color: #eee;
-      width: 100%;
+      width: 50%;
+      gap: 20px;
+      transform: translateX(-15%) translateY(5%);
     }
-    .slogan p{
+    .slogan p {
       margin: 10% 10%;
     }
-    .slogan img{
-      width: 340px;
-      height: 240px;
+    .slogan img {
+      max-width: 340px;
+      max-height: 240px;
       flex-shrink: 0;
       margin-top: 40px;
       border-radius: 15px;
+    }
+    #container-servico_1, #container-servico_2, #container-servico_3, #container-servico_4, #container-servico_5, #container-servico_6, #container-servico_7, #container-servico_8{
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding: 5%;
+    }
+    img{
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.30);
+      width: 100%;
+    }
+  
+    #container-servico_1, #container-servico_3, #container-servico_5, #container-servico_7{
+      background-color: #f7e9b436;
+    }
+  
+    .titulo_saiba_mais h3{
+      text-align: center;
+    }
+  
+    .descricao p{
+      text-align: justify;
+    }
+  
+    .descricao_servico{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .descricao_servico{
+      width: 35%;
+    }
+  
+    p, h3{
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    section#menu-baixo {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 250px;
+      justify-content: space-evenly;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .menu-links {
+      display: flex;
+      justify-content: center;
+      width: 20%;
+      margin-top: 2%;
+    }
+    .titulo-rodape {
+      display: flex;
+  
+      justify-content: flex-end;
     }
   }
   /* NOTBOOK MEDIO */
@@ -321,66 +472,27 @@ nav {
       width: 50%;
     }
   
-    section#serviços .titulo_serviço{
-      height: 10vh;
-    font-size: 25px;
-    color: #F34412;
-      
-    }
-  
-    section#container-cliente .portifolio-cliente{
-      width: 100%;
-      height: 100%;
-      display: flex;
-    }
-    section#container-cliente .portifolio-cliente .cliente{
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      
-    }
-  
-    .cliente{
-      width: 24%;
-    }
-  
-    section#conteiner-cliente .portifolio-cliente .cliente .imagem-cliente img{
-      width: 200%;
-      height: 100%;
-    }
-  
-    .flex{
-      width: 100%;
-      height: auto;
-      display: flex;
-      justify-content: space-around;
-      margin-top: 5%;
-    }
-    .container-sobre{
-      width: 80%;
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
-    .container-sobre img{
-      width: 30%;
-      height: 5%;
-      display: flex;
-      border-radius: 5%;
-    }
-  
-    .txt-sobre h2{
+    .container-slogan {
       display: flex;
       justify-content: center;
     }
-  
-    .txt-sobre{
-       gap: 10px;
-       margin-left: 3%;
-       padding: 5%;
+    .slogan {
+      display: flex;
+      align-items: center;
+      margin-left: 25%;
+      font-size: 64px;
+      color: #eee;
+      width: 100%;
+    }
+    .slogan p {
+      margin: 10% 15%;
+    }
+    .slogan img {
+      width: 340px;
+      height: 240px;
+      flex-shrink: 0;
+      margin-top: 40px;
+      border-radius: 15px;
     }
   
   section#menu-baixo{
@@ -407,14 +519,41 @@ nav {
     justify-content: flex-end;
   }
   }
+
+  @media only screen and (min-width: 1680px) {
+    .container-slogan {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    .slogan {
+      display: flex;
+      align-items: center;
+      font-size: 64px;
+      color: #eee;
+      width: 65%;
+    }
+    .slogan p {
+      display: flex;
+      margin: 15% 10%;
+      align-items: flex-start;
+    }
+    .slogan img {
+      width: 340px;
+      height: 240px;
+      flex-shrink: 0;
+      margin-top: 40px;
+      border-radius: 15px;
+    }
+  }
   
   /* FULL HD*/
   
   @media only screen and (min-width: 1920px) {
-    nav{
+    nav {
       transform: translateY(100%);
     }
-    .container-slogan{
+    .container-slogan {
       display: flex;
       justify-content: center;
       width: 100%;
@@ -426,78 +565,16 @@ nav {
       color: #eee;
       width: 100%;
     }
-    .slogan p{
+    .slogan p {
       width: 40%;
       margin: 10% 10%;
     }
-    .slogan img{
+    .slogan img {
       width: 540px;
       height: 340px;
       flex-shrink: 0;
       margin-top: 40px;
       border-radius: 15px;
-    }
-  
-    section#serviços .titulo_serviço{
-    height: 10vh;
-    font-size: 40px;
-    color: #F34412;
-      
-    }
-  
-    section#container-cliente .portifolio-cliente{
-      width: 100%;
-      height: 100%;
-      display: flex;
-    }
-    section#container-cliente .portifolio-cliente .cliente{
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      
-    }
-  
-    .cliente{
-      width: 30%;
-    }
-  
-    section#conteiner-cliente .portifolio-cliente .cliente .imagem-cliente img{
-      width: 200%;
-      height: 100%;
-    }
-  
-    .flex{
-      width: 100%;
-      height: auto;
-      display: flex;
-      justify-content: space-around;
-      margin-top: 10%;
-    }
-    .container-sobre{
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
-    .container-sobre img{
-      width: 60%;
-      height: 10%;
-      display: flex;
-      border-radius: 10%;
-    }
-  
-    .txt-sobre h2{
-      display: flex;
-      justify-content: center;
-    }
-  
-    .txt-sobre{
-       gap: 20px;
-       margin-left: 6%;
-       padding: 10%;
     }
   
   section#menu-baixo{

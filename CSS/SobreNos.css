@@ -2,9 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
-
-
 
 nav {
   height: 100%;
@@ -20,7 +19,6 @@ nav {
   display: flex;
   align-items: center;
   list-style-type: none;
-
 }
 
 .menu a:hover {
@@ -28,13 +26,12 @@ nav {
   border-radius: 10px;
 }
 
-.menu li>a {
+.menu li > a {
   display: flex;
   padding: 0.5rem 1rem;
   color: #444;
   text-decoration: none;
   align-items: center;
-
 }
 
 /* .menu img{
@@ -53,7 +50,6 @@ nav {
   z-index: 100;
   transform: translateY(70%);
   border-radius: 15px;
-  /* margin-top: 2%; */
   background: #f4f4f4;
   transition: all 0.2s ease;
 }
@@ -67,15 +63,11 @@ nav {
   width: 100%;
   height: 10vh;
   display: flex;
-  /* transform: translateY(-565%); */
-  /* align-content: flex-start; */
-  /* align-items: flex-start; */
   border-radius: 0px 0px 50px 50px;
-  background: linear-gradient(90deg, #B55700 50%, #FFC700 100%);
+  background: linear-gradient(90deg, #b55700 50%, #ffc700 100%);
 }
 
 .imagem_de_fundo {
-
   top: 0;
   background-image: url("../imagens/background-header.jpg");
   background-position: center;
@@ -93,7 +85,6 @@ nav {
 }
 
 .slogan {
-
   color: #eee;
   width: 150%;
   display: flex;
@@ -124,10 +115,65 @@ nav {
 }
 
 .colored {
-  /* background: #333; */
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-  /* position: relative !important; */
   transform: translateY(5%);
+}
+.titulo_equipe{
+  font-family: "Poppins", sans-serif;
+}
+.SobreNos {
+  background: #f7f7f7f7;
+}
+
+.fundoCinza {
+  display: flex;
+  background: #f7f7f7;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 8% 1%;
+}
+
+.textoExplicativo {
+  width: 35%;
+  text-align: justify;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.imagemsobre img {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.436);
+}
+.fundoBranco {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 8% 1%;
+  background: #f7e9b436;
+}
+.textoEquipe {
+  width: 35%;
+  text-align: justify;
+  padding: 10px;
+  font-size: 24px;
+}
+.imagemEquipe img {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.436);
+}
+.titulo_equipe {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*aqui*/
@@ -195,7 +241,6 @@ nav {
   list-style: none;
 }
 
-
 footer .rodape {
   display: flex;
   flex-direction: column;
@@ -203,69 +248,176 @@ footer .rodape {
   background-color: #1e1e1e;
   color: #fff;
   padding: 10px;
+}
+/* CELULAR */
+@media only screen and (max-width: 550px) {
+  .menu li > a {
+    display: none;
+  }
 
+  .nav-toggle svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+  #header .logo img {
+    max-width: 80%;
+  }
+
+  .imagem_de_fundo {
+    width: 100%;
+    display: flex;
+  }
+
+  .slogan {
+    flex-direction: column-reverse;
+    margin-top: 15%;
+    margin-left: 15%;
+  }
+
+  .slogan p {
+    width: 40%;
+  }
+
+  .slogan img {
+    width: 45%;
+    border-radius: 15px;
+  }
+
+  .fundoCinza, .fundoBranco{
+    display: flex;
+    flex-direction: column-reverse;
+    
+  }
+  .fundoCinza .imagemsobre, .imagemEquipe {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 15px;
+  }
+
+   .textoEquipe, .textoExplicativo{
+    width: 100%;
+  }
 }
 
 /* Tablet */
 @media only screen and (min-width: 550px) {
+  .menu li > a {
+    display: none;
+  }
+  .nav-toggle svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
   .slogan {
     font-size: 64px;
     color: #eee;
     width: 50%;
+    gap: 20px;
+    transform: translateX(20%) translateY(80%);
   }
 
-  .container-sobre {
-    flex-direction: row;
+  .slogan img {
+    max-width: 320px;
   }
-
-  .paragrafo3 {
-    width: 95%;
-    margin-left: 2%;
-    margin-top: 10px;
-    color: #451179;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-
-  .container-sobre img {
-    width: 50%;
-    height: 50%;
+  .fundoCinza, .fundoBranco{
     display: flex;
-    margin-top: 10%;
-    margin-left: 2%;
-
+    flex-direction: column-reverse;
+    
+  }
+  .fundoCinza .imagemsobre, .imagemEquipe {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 15px;
   }
 
-  .txt-sobre {
-    margin-top: 10%;
+   .textoEquipe, .textoExplicativo{
+    width: 100%;
   }
 }
 
 /* NOTBOOK PEQUENO */
 @media only screen and (min-width: 992px) {
+  .menu li > a {
+    display: flex;
+    padding: 0.5rem 1rem;
+    color: #444;
+    text-decoration: none;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
   .container-slogan {
     display: flex;
     justify-content: center;
   }
-
   .slogan {
-    display: flex;
-    align-items: center;
     font-size: 64px;
     color: #eee;
-    width: 100%;
+    width: 50%;
+    gap: 20px;
+    transform: translateX(-15%) translateY(5%);
   }
-
   .slogan p {
     margin: 10% 10%;
   }
-
   .slogan img {
-    width: 340px;
-    height: 240px;
+    max-width: 340px;
+    max-height: 240px;
     flex-shrink: 0;
     margin-top: 40px;
     border-radius: 15px;
+  }
+  .fundoCinza, .fundoBranco{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .fundoBranco{
+    flex-direction: row-reverse;
+  }
+  .imagemsobre img {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.436);
+  }
+  .textoEquipe, .textoExplicativo{
+    width: 40%;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+  }
+
+  section#menu-baixo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 250px;
+    justify-content: space-evenly;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-links {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin-top: 2%;
+  }
+  .titulo-rodape {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -277,77 +429,27 @@ footer .rodape {
     width: 50%;
   }
 
-  section#serviços .titulo_serviço {
-    height: 10vh;
-    font-size: 25px;
-    color: #F34412;
-
-  }
-
-  section#container-cliente .portifolio-cliente {
-    width: 100%;
-    height: 100%;
-    display: flex;
-  }
-
-  section#container-cliente .portifolio-cliente .cliente {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-  }
-
-  .cliente {
-    width: 24%;
-  }
-
-  section#conteiner-cliente .portifolio-cliente .cliente .imagem-cliente img {
-    width: 200%;
-    height: 100%;
-  }
-
-  .flex {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 5%;
-  }
-
-  .container-sobre {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .container-sobre img {
-    width: 30%;
-    height: 5%;
-    display: flex;
-    border-radius: 5%;
-  }
-
-  .txt-sobre h2 {
+  .container-slogan {
     display: flex;
     justify-content: center;
   }
-
-  .txt-sobre {
-    gap: 10px;
-    margin-left: 3%;
-    padding: 5%;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
   .slogan {
+    display: flex;
+    align-items: center;
+    margin-left: 25%;
     font-size: 64px;
     color: #eee;
-    width: 50%;
+    width: 100%;
+  }
+  .slogan p {
+    margin: 10% 15%;
+  }
+  .slogan img {
+    width: 340px;
+    height: 240px;
+    flex-shrink: 0;
+    margin-top: 40px;
+    border-radius: 15px;
   }
 
   section#menu-baixo {
@@ -356,21 +458,17 @@ footer .rodape {
     width: 100%;
     height: 250px;
     justify-content: space-evenly;
-
   }
-
   .container {
     display: flex;
     flex-direction: column;
   }
-
   .menu-links {
     display: flex;
     justify-content: center;
     width: 20%;
     margin-top: 2%;
   }
-
   .titulo-rodape {
     display: flex;
 
@@ -378,17 +476,42 @@ footer .rodape {
   }
 }
 
-@media only screen and (min-width: 1920px) {
-  nav {
-    transform: translateY(100%);
-  }
-
+@media only screen and (min-width: 1680px) {
   .container-slogan {
     display: flex;
     justify-content: center;
     width: 100%;
   }
+  .slogan {
+    display: flex;
+    align-items: center;
+    font-size: 64px;
+    color: #eee;
+    width: 65%;
+  }
+  .slogan p {
+    display: flex;
+    margin: 15% 10%;
+    align-items: flex-start;
+  }
+  .slogan img {
+    width: 340px;
+    height: 240px;
+    flex-shrink: 0;
+    margin-top: 40px;
+    border-radius: 15px;
+  }
+}
 
+@media only screen and (min-width: 1920px) {
+  nav {
+    transform: translateY(100%);
+  }
+  .container-slogan {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
   .slogan {
     display: flex;
     align-items: center;
@@ -396,12 +519,10 @@ footer .rodape {
     color: #eee;
     width: 100%;
   }
-
   .slogan p {
     width: 40%;
     margin: 10% 10%;
   }
-
   .slogan img {
     width: 540px;
     height: 340px;
@@ -416,81 +537,19 @@ footer .rodape {
     width: 100%;
     height: 250px;
     justify-content: space-evenly;
-
   }
-
   .container {
     display: flex;
     flex-direction: column;
   }
-
   .menu-links {
     display: flex;
     justify-content: center;
     width: 40%;
   }
-
   .titulo-rodape {
     display: flex;
 
     justify-content: flex-end;
   }
-}
-
-.SobreNos {
-
-  background: #f7f7f7f7;
-}
-
-
-
-.fundoCinza {
-  display: flex;
-  background: #f7f7f7;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 8% 1%;
-}
-
-.textoExplicativo {
-  width: 35%;
-  text-align: justify;
-  padding: 10px;
-  font-size: 20px;
-}
-
-.imagemsobre img {
-  width: 80%;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.436);
-}
-.fundoBranco{
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row-reverse;
-  align-items: center;
-  padding: 8% 1%;
-  background:#f7e9b436;
-}
-.textoEquipe{
-  width: 35%;
-  text-align: justify;
-  padding: 10px;
-  font-size: 24px;
-}
-.imagemEquipe img {
-  width: 80%;
-  border-radius:  10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.436);
-}
-.titulo_equipe{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10%;
-}
-
-p{
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
