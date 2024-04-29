@@ -50,7 +50,6 @@ nav {
   z-index: 100;
   transform: translateY(70%);
   border-radius: 15px;
-  /* margin-top: 2%; */
   background: #313131; 
   transition: all 0.2s ease;
 }

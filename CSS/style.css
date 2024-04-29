@@ -205,6 +205,7 @@ section#serviços .cartão-serviços .serviço_card .serviço-imagem img {
   background: transparent;
   color: #ffc700;
   transform: scale(1.02);
+  cursor: pointer;
 }
 .cartão-serviços .serviço_fundo {
   display: flex;
@@ -290,6 +291,7 @@ section#serviços .cartão-serviços .serviço_card .serviço-imagem img {
   background: white;
   color: #ffc700;
   transform: scale(1.02);
+  cursor: pointer;
 }
 
 .menu {
@@ -1115,4 +1117,5 @@ footer .rodape {
 
     justify-content: flex-end;
   }
+  /**/
 }
