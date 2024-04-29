@@ -51,7 +51,7 @@ nav {
   transform: translateY(70%);
   border-radius: 15px;
   /* margin-top: 2%; */
-  background: #f4f4f4;
+  background: #313131; 
   transition: all 0.2s ease;
 }
 
@@ -431,7 +431,7 @@ footer .rodape {
   .menu li > a {
     display: flex;
     padding: 0.5rem 1rem;
-    color: #444;
+    color: white;
     text-decoration: none;
     align-items: center;
   }
