@@ -50,7 +50,7 @@ nav {
   z-index: 100;
   transform: translateY(70%);
   border-radius: 15px;
-  background: #f4f4f4;
+  background: #313131; 
   transition: all 0.2s ease;
 }
 
@@ -168,6 +168,7 @@ nav {
   display: flex;
   justify-content: center;
   margin-bottom: 10%;
+  color: #b45600;
 }
 
 p {
@@ -349,7 +350,7 @@ footer .rodape {
   .menu li > a {
     display: flex;
     padding: 0.5rem 1rem;
-    color: #444;
+    color: white;
     text-decoration: none;
     align-items: center;
   }

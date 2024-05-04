@@ -135,8 +135,6 @@ nav {
     }
   
     img{
-      border-radius: 10px;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.30);
       width: 100%;
     }
   
@@ -150,6 +148,10 @@ nav {
   
     .descricao p{
       text-align: justify;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 21px;
     }
   
     .descricao_servico{
@@ -372,7 +374,6 @@ nav {
     .menu li > a {
       display: flex;
       padding: 0.5rem 1rem;
-      color: #444;
       text-decoration: none;
       align-items: center;
     }
@@ -410,8 +411,7 @@ nav {
       padding: 5%;
     }
     img{
-      border-radius: 10px;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.30);
+    
       width: 100%;
     }
   
