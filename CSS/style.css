@@ -1,4 +1,4 @@
-html{
+html {
   margin: 0;
   padding: 0;
   gap: 0;
@@ -29,9 +29,10 @@ nav {
   margin: 0 auto;
   position: relative;
   position: fixed;
+ 
   transform: translateY(70%);
   border-radius: 15px;
-  background: #313131; 
+  background: #f4f4f4;
   transition: all 0.2s ease;
 }
 
@@ -41,12 +42,43 @@ nav {
   list-style-type: none;
 }
 
+/* nav ul  ul {
+  display: none;
+  }
+nav ul .submenu-servico.mostra {
+  display: block
+  } */
+.sub {
+  display: none;
+  position: absolute;
+  transform: translateX(-220%) translateY(55%);
+}
+.protogeo {
+  display: none;
+  position: absolute;
+  transform: translateX(-520%) translateY(90%);
+}
+ul {
+  list-style: none;
+}
+.servico,
+.nos {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+}
+.sub,
+.protogeo li {
+  display: block;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
 .menu a:hover {
   background: #db8708;
   border-radius: 10px;
 }
 
-.menu li > a {
+.menu li {
   display: flex;
   padding: 0.5rem 1rem;
   color: #444;
@@ -97,14 +129,10 @@ nav {
 }
 
 .logo img {
-  max-width: 110%;
+  max-width: 50%;
+  max-height: 50%;
 }
-/* .logo:hover img{
-    -moz-transform: scale(1.1);
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-  }
-   */
+
 .colored {
   /* background: #333; */
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
@@ -787,15 +815,16 @@ footer .rodape {
     padding: 0;
     box-sizing: border-box;
   }
-
-  section#serviços .titulo_serviço {
-    text-align: center;
-  }
-
-  nav{
+  nav {
     position: absolute;
   }
+  .menu .servico {
+    display: none;
+  }
   .menu li > a {
+    display: none;
+  }
+  #hamburguer {
     display: none;
   }
 
@@ -807,6 +836,7 @@ footer .rodape {
   .nav-toggle {
     display: block;
   }
+
   #header .logo img {
     max-width: 80%;
   }
@@ -833,7 +863,6 @@ footer .rodape {
   }
 
   .slogan img {
-    
     width: 60%;
     border-radius: 15px;
   }
@@ -843,7 +872,6 @@ footer .rodape {
     display: flex;
   }
   #orcamento .orcamento-imagem {
-  
     display: flex;
     width: 80%;
     height: 70%;
@@ -866,7 +894,6 @@ footer .rodape {
     flex-direction: column;
     justify-content: center;
     transform: translateX(-50%) translateY(-10%);
-    
   }
   .texto-orcamento button {
     margin-top: 100px;
@@ -875,6 +902,9 @@ footer .rodape {
 }
 /* Tablet */
 @media only screen and (min-width: 550px) {
+  .menu .servico {
+    display: none;
+  }
   .menu li > a {
     display: none;
   }
@@ -909,6 +939,14 @@ footer .rodape {
 }
 /* NOTBOOK PEQUENO */
 @media only screen and (min-width: 992px) {
+  .menu .servico {
+    display: flex;
+    padding: 0.5rem 1rem;
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    align-items: center;
+    cursor: pointer;
+  }
   .menu li > a {
     display: flex;
     padding: 0.5rem 1rem;

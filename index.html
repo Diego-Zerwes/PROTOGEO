@@ -27,11 +27,23 @@
       </a>
       </div>
       <ul class="menu">
-        <li>
-          <a href="servico.html">SERVIÇO <img src="./imagens/arrow_drop_down_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+        <li  class="servico" onmouseover="mostraSub('sub1')" onmouseleave="escondeSub('sub1')"><a href="servico.html">SERVIÇO <img src="./imagens/arrow_drop_down_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>  
+          <ul class="sub" id="sub1">
+            <li><a href="servico.html#container-servico_1">Levantamento Topográfico</a></li>
+            <li><a href="servico.html#container-servico_2">Locação de Obra</a></li>
+            <li><a href="servico.html#container-servico_3">As Built</a></li>
+            <li><a href="servico.html#container-servico_4">Nivelamento</a></li>
+            <li><a href="servico.html#container-servico_5">Demarcação de Terras</a></li>
+            <li><a href="servico.html#container-servico_6">Cálculo de Volumetria</a></li>
+            <li><a href="servico.html#container-servico_7">Regularização de Imóveis</a></li>
+            <li><a href="servico.html#container-servico_8">Georreferenciamento</a></li>
+          </ul>
         </li>
-        <li>
+        <li class="nos" onmouseover="mostraSub('protogeo1')" onmouseleave="escondeSub('protogeo1')">
           <a href="SobreNos.html">PROTOGEO <img src="./imagens/arrow_drop_down_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+          <ul class="protogeo" id="protogeo1">
+            <li><a href="">teste</a></li>
+          </ul>
           
         </li>
         <li>
@@ -41,10 +53,17 @@
           <a href="index.html#orcamento">ORÇAMENTO</a>
         </li>
       </ul>
-      <div class="nav-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#111" viewBox="0 0 256 256">
-            <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+      <div class="nav-toggle" >
+        <svg  xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#111" viewBox="0 0 256 256">
+            <path  d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+           
         </svg>
+        <div id="hamburguer" onclick="mostrarNavBar('navBar')">
+        <li class="lista">
+          <a href="SobreNos.html">PROTOGEO <img src="./imagens/arrow_drop_down_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+          
+        </li>
+      </div>
       </div>
   
     </nav>
@@ -75,6 +94,7 @@
           <div class="serviço_fundo">
 
             <!--serviço 1-->
+           
             <div class="serviço_card">
               <div class="serviço-imagem">
                 <img src="./imagens/levantamento.png" alt="" width="450px" height="281px">
@@ -89,6 +109,7 @@
                 </div>
               </div>
             </div>
+         
             
             <!--serviço 2-->
             <div class="serviço_card">
