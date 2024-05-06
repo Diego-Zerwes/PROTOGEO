@@ -6,14 +6,28 @@
 
 /*TESTE*/
 
-nav {
-  height: 100%;
-  width: 80%;
+#header {
+  width: 50%;
   display: flex;
+}
+
+nav {
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  height: 60px;
+  z-index: 100;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
   position: relative;
+  position: fixed;
+  transform: translateY(70%);
+  border-radius: 15px;
+  background: #444;
+  transition: all 0.2s ease;
 }
 
 .menu {
@@ -22,37 +36,45 @@ nav {
   list-style-type: none;
 }
 
+.sub {
+  display: none;
+  position: absolute;
+  transform: translateX(-220%) translateY(55%);
+}
+.protogeo {
+  display: none;
+  position: absolute;
+  transform: translateX(-520%) translateY(90%);
+}
+ul {
+  list-style: none;
+}
+.servico,
+.nos {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+}
+.sub,
+.protogeo li {
+  display: block;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
 .menu a:hover {
   background: #db8708;
   border-radius: 10px;
 }
 
-.menu li > a {
+.menu li {
   display: flex;
   padding: 0.5rem 1rem;
   color: #444;
   text-decoration: none;
   align-items: center;
 }
-/* .menu img{
-    display: block;
-  } */
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 80%;
-  height: 60px;
-  padding: 1rem;
-  display: flex;
-  z-index: 100;
-  transform: translateY(70%);
-  border-radius: 15px;
-  /* margin-top: 2%; */
-  background: #313131; 
-  transition: all 0.2s ease;
+.menu img {
+  display: block;
 }
 
 .nav-toggle {
@@ -63,9 +85,6 @@ nav {
   width: 100%;
   height: 10vh;
   display: flex;
-  /* transform: translateY(-565%); */
-  /* align-content: flex-start; */
-  /* align-items: flex-start; */
   border-radius: 0px 0px 50px 50px;
   background: linear-gradient(90deg, #b55700 50%, #ffc700 100%);
 }
@@ -75,11 +94,9 @@ nav {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
   width: 100%;
   height: 70vh;
   display: flex;
-
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -100,18 +117,10 @@ nav {
 }
 
 .logo img {
-  width: 350px;
-  height: 50px;
-  flex-shrink: 0;
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  max-width: 540px;
+  max-height: 340px;
 }
-.logo:hover img {
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
+
 .colored {
   /* background: #333; */
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
@@ -341,18 +350,21 @@ footer .rodape {
 
 /* Celular */
 @media only screen and (max-width: 550px) {
+  nav {
+    position: absolute;
+  }
+  .menu .servico {
+    display: none;
+  }
   .menu li > a {
     display: none;
   }
-
-  .nav-toggle svg {
-    width: 32px;
-    height: 32px;
-  }
-
   .nav-toggle {
-    display: block;
+    width: 80%;
+    height: 24px;
+    display: flex;
   }
+
   #header .logo img {
     max-width: 80%;
   }
@@ -363,18 +375,29 @@ footer .rodape {
   }
 
   .slogan {
+    width: 100%;
+    height: 40vh;
     flex-direction: column-reverse;
     margin-top: 15%;
-    margin-left: 15%;
+    margin-left: -5%;
+    justify-content: center;
+    align-items: center;
   }
 
   .slogan p {
-    width: 40%;
+    width: 50%;
+    font-size: 24px;
+    margin-top: 5px;
   }
 
   .slogan img {
-    width: 45%;
+    width: 60%;
     border-radius: 15px;
+  }
+  .logo img{
+    width: 100%;
+    height: 100%;
+    
   }
 
   form {
@@ -401,13 +424,10 @@ footer .rodape {
   .menu li > a {
     display: none;
   }
-  .nav-toggle svg {
-    width: 32px;
-    height: 32px;
-  }
-
   .nav-toggle {
-    display: block;
+    width: 10%;
+    height: 24px;
+    display: flex;
   }
 
   .slogan {
@@ -420,6 +440,12 @@ footer .rodape {
 
   .slogan img {
     max-width: 320px;
+  }
+
+  .logo img{
+    width: 70%;
+    height: 80%;
+    
   }
   form {
     width: 80%;
@@ -518,6 +544,11 @@ footer .rodape {
     flex-shrink: 0;
     margin-top: 40px;
     border-radius: 15px;
+  }
+  .logo img{
+    width: 50%;
+    height: 10%;
+    
   }
 
   section#menu-baixo {
