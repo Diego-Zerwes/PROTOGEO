@@ -17,12 +17,37 @@ function escondeSub(sub,protogeo){
   subfilho.style.display = 'none'; 
 }
 
-function mostraNavBar(navBar){
-  subfilho = document.getElementById(navBar);
-  subfilho.style.display = 'block';
+// function mostraNavBar(navBar){
+//   subfilho = document.getElementById(navBar);
+//   subfilho.style.display = 'block';
+// }
+
+// function esconderNavBar(navBar){
+//   subfilho = document.getElementById(navBar);
+//   subfilho.style.display = 'none'; 
+// }
+// const btnMobile = document.getElementById('checkbox-menu');
+// function toggleMenu(){
+//   const btnMobile = document.getElementById('nav1');
+//   nav.classList.toggle('active');
+// }
+
+// btnMobile.addEventListener('click',toggleMenu);
+
+const btnMobile = document.getElementById('checkbox-menu');
+
+function toggleMenu(event) {
+  if (event.type === 'touchstart') event.preventDefault();
+  const nav = document.getElementById('nav');
+  nav.classList.toggle('active');
+  const active = nav.classList.contains('active');
+  event.currentTarget.setAttribute('aria-expanded', active);
+  if (active) {
+    event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+  } else {
+    event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+  }
 }
 
-function esconderNavBar(navBar){
-  subfilho = document.getElementById(navBar);
-  subfilho.style.display = 'none'; 
-}
+btnMobile.addEventListener('click', toggleMenu);
+btnMobile.addEventListener('touchstart', toggleMenu);
