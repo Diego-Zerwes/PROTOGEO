@@ -8,12 +8,12 @@ $(window).on('scroll', function () {
 })
 
 function mostraSub(sub,protogeo){
-  subfilho = document.getElementById(sub,protogeo);
+  subfilho = document.getElementById(sub);
   subfilho.style.display = 'block';
 }
 
 function escondeSub(sub,protogeo){
-  subfilho = document.getElementById(sub,protogeo);
+  subfilho = document.getElementById(sub);
   subfilho.style.display = 'none'; 
 }
 
@@ -37,11 +37,14 @@ function escondeSub(sub,protogeo){
 const btnMobile = document.getElementById('checkbox-menu');
 
 function toggleMenu(event) {
+
   if (event.type === 'touchstart') event.preventDefault();
-  const nav = document.getElementById('nav');
+  const nav = document.getElementById('nav1');
   nav.classList.toggle('active');
   const active = nav.classList.contains('active');
-  event.currentTarget.setAttribute('aria-expanded', active);
+  event.currentTarget.classList.toggle('active');
+
+  //event.currentTarget.setAttribute('aria-expanded', active);
   if (active) {
     event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
   } else {
@@ -50,4 +53,4 @@ function toggleMenu(event) {
 }
 
 btnMobile.addEventListener('click', toggleMenu);
-btnMobile.addEventListener('touchstart', toggleMenu);
+//btnMobile.addEventListener('touchstart', toggleMenu);
