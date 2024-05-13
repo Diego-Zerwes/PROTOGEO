@@ -62,7 +62,7 @@ ul {
 
 #nav1 li {
   display: flex;
-  background-color: #444;
+  background-color: #fff;
   padding: 10px;
 }
 
@@ -87,9 +87,8 @@ ul {
   cursor: pointer;
   padding: 10px;
 }
-.sub,
-.protogeo li {
-  display: block;
+.sub {
+  display: none;
   background-color: #444;
   padding: 10px;
 }
@@ -129,16 +128,17 @@ label span:nth-child(3) {
   top: 16px;
 }
 
-#checkbox-menu:checked + label span:nth-child(1) {
+#checkbox-menu.active + label span:nth-child(1) {
   transform: rotate(-45deg);
   top: 8px;
+  color: #f16234;
 }
 
-#checkbox-menu:checked + label span:nth-child(2) {
+#checkbox-menu.active  + label span:nth-child(2) {
   opacity: 0;
 }
 
-#checkbox-menu:checked + label span:nth-child(3) {
+#checkbox-menu.active  + label span:nth-child(3) {
   transform: rotate(45deg);
   top: 8px;
 }
@@ -462,24 +462,38 @@ footer .rodape {
   }
 
   #nav1 {
-    width: 100%;
+    width: 20%;
     height: 36px;
     display: flex;
+    align-items:self-end;
   }
 
  
 
-  #nav.active #menu {
+  #nav1.active #menu {
     height: calc(100vh - 70px);
     visibility: visible;
-    overflow-y: auto;
-    
+     overflow-y: visible;
+
+
   }
+
+
+
+  #menu{
+    margin-top: 40px;
+    transform: translateX(30%);
+    overflow-y: auto;
+  }
+
   #menu a {
     padding: 1rem 0;
     margin: 0 1rem;
     border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: #444;
+    text-decoration: none;
   }
+
   #checkbox-menu label{
     display: flex;
     padding: 0.5rem 1rem;
@@ -489,11 +503,14 @@ footer .rodape {
     cursor: pointer;
     gap: 0.5rem;
   }
- 
+
+ #menu li {
+  background: #fff;
+ }
   
 
   #header .logo img {
-    max-width: 80%;
+    max-width: 100%;
   }
 
   .imagem_de_fundo {
@@ -616,6 +633,7 @@ footer .rodape {
     align-items: center;
   }
 
+  
   .nav-toggle {
     display: none;
   }
@@ -634,6 +652,7 @@ footer .rodape {
   .slogan p {
     margin: 10% 10%;
   }
+
   .slogan img {
     max-width: 340px;
     max-height: 240px;
