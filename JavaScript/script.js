@@ -54,3 +54,27 @@ function toggleMenu(event) {
 
 btnMobile.addEventListener('click', toggleMenu);
 //btnMobile.addEventListener('touchstart', toggleMenu);
+
+
+const hiddenElements = document.querySelectorAll(".hidden");
+const animeElements = document.querySelectorAll(".anime");
+
+const intersectionObserver = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    const isVisible = entry.isIntersecting;
+    toggleVisibility(entry.target, isVisible);
+
+  });
+});
+
+
+
+hiddenElements.forEach((element)=>intersectionObserver.observe(element))
+
+const toggleVisibility = (element, isVisible) => {
+  if (isVisible){
+    element.classList.add("show");
+  }else{
+    element.classList.remove("show");
+  }
+}

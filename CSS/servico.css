@@ -193,7 +193,7 @@ label span:nth-child(3) {
       justify-content: space-evenly;
       padding: 5%;
     }
-  
+    
     img{
       width: 100%;
     }
@@ -201,6 +201,18 @@ label span:nth-child(3) {
     #container-servico_1, #container-servico_3, #container-servico_5, #container-servico_7{
       background-color: #f7e9b436;
     }
+    .hidden {
+      opacity: 0;
+      transform: translateX(-50%);
+      filter: blur(5px);
+      transition: 0.5s;
+    }
+    .show {
+      opacity: 1;
+      transform: translateX(0%);
+      filter:blur(0px);
+    }
+
   
     .titulo_saiba_mais h3{
       text-align: center;
