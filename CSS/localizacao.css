@@ -4,13 +4,6 @@
   box-sizing: border-box;
 }
 
-/*TESTE*/
-
-#header {
-  width: 50%;
-  display: flex;
-}
-
 nav {
   display: flex;
   top: 0;
@@ -41,24 +34,23 @@ nav {
   position: absolute;
   transform: translateX(-220%) translateY(55%);
 }
-.protogeo {
-  display: none;
-  position: absolute;
-  transform: translateX(-520%) translateY(90%);
-}
 ul {
   list-style: none;
+  color: #141414;
 }
-.servico,
-.nos {
+
+#nav1 {
   display: inline-block;
   cursor: pointer;
   padding: 10px;
+  flex-direction: column;
+  align-items: center;
+
 }
-.sub,
-.protogeo li {
-  display: block;
-  background-color: #f4f4f4;
+
+#nav1 li {
+  display: flex;
+  background-color: #fff;
   padding: 10px;
 }
 .menu a:hover {
@@ -77,9 +69,74 @@ ul {
   display: block;
 }
 
-.nav-toggle {
+
+#nav1 {
   display: none;
 }
+
+.nos {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  
+}
+.sub {
+  display: none;
+  background-color: #444;
+  padding: 10px;
+}
+
+#checkbox-menu {
+  position: absolute;
+  opacity: 0;
+}
+
+label {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  height: 22px;
+  width: 30px;
+}
+
+label span {
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 100%;
+  border-radius: 30px;
+  background: #f16234;
+  transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1) {
+  top: 0;
+}
+
+label span:nth-child(2) {
+  top: 8px;
+}
+
+label span:nth-child(3) {
+  top: 16px;
+}
+
+#checkbox-menu.active + label span:nth-child(1) {
+  transform: rotate(-45deg);
+  top: 8px;
+  color: #f16234;
+}
+
+#checkbox-menu.active  + label span:nth-child(2) {
+  opacity: 0;
+}
+
+#checkbox-menu.active  + label span:nth-child(3) {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+
 .decoracao {
   margin: 0;
   width: 100%;
@@ -460,6 +517,10 @@ footer .rodape {
     color: white;
     text-decoration: none;
     align-items: center;
+  }
+
+  .sub{
+    transform: translateX(-170%) translateY(55%);
   }
 
   .nav-toggle {
