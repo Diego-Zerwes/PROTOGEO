@@ -302,7 +302,9 @@ section#serviços .cartão-serviços .serviço_card .serviço-imagem img {
   justify-content: center;
   align-items: center;
 }
-
+.orcamento {
+  transition-delay: 6ms;
+}
 .orcamento-imagem {
   height: 220px;
   width: 70%;

@@ -289,8 +289,29 @@ input[type="radio"] {
   font-variation-settings: "slnt" 0;
   color: #444444;
   gap: 25px;
+  
+}
+.container-assunto{
+  display: flex;
+  width: 100%;
+  gap: 100px;
+  justify-content: flex-start;
 }
 
+.opcoes{
+  width: 50%;
+  height: auto;
+}
+
+.assunto{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.assunto-form1, .assunto-form2{
+  width: 20%;
+}
 .mensagem-form {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
