@@ -374,6 +374,47 @@ footer .rodape {
     height: 100%;
   }
 
+  #nav1 {
+    width: 20%;
+    height: 36px;
+    display: flex;
+    transform: translateX(180%) translateY(30%);
+  }
+
+  #nav1.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+     overflow-y: visible;
+  }
+
+  #menu{
+    margin-top: 22px;
+    transform: translateX(-17%);
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #checkbox-menu label{
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+ #menu li {
+  background: #444;
+ }
+
   .fundoCinza,
   .fundoBranco {
     display: flex;
@@ -406,6 +447,49 @@ footer .rodape {
     height: 24px;
     display: flex;
   }
+
+  #nav1 {
+    width: 12%;
+    height: 30px;
+    display: flex;
+    transform: translateX(360%) translateY(40%);
+  }
+
+  #nav1.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+     overflow-y: visible;
+  }
+
+ 
+
+  #menu{
+    margin-top: 29px;
+    transform: translateX(-16%);
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #checkbox-menu label{
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+ #menu li {
+  background: #444;
+ }
 
   .slogan {
     font-size: 64px;
