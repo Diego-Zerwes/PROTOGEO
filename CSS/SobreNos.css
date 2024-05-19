@@ -58,6 +58,17 @@ ul {
   background: #db8708;
   border-radius: 10px;
 }
+.hidden {
+  opacity: 0;
+  transform: translateX(-50%);
+  filter: blur(5px);
+  transition: 0.5s;
+}
+.show {
+  opacity: 1;
+  transform: translateX(0%);
+  filter:blur(0px);
+}
 
 .menu li {
   display: flex;
