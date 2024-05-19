@@ -94,7 +94,7 @@
 
     <div class="container-form hidden">
 
-      <form action="contatarProtogeo.xlm" method="post" autocomplete="off">
+      <form>
 
         <fieldset>
 
@@ -105,7 +105,7 @@
 
           <div class="email-form hidden">
             <label for="email">*E-mail</label>
-            <input type="eemail" name="email" id="email" placeholder="email@email.com" required>
+            <input type="email" name="email" id="email" placeholder="email@email.com" required>
           </div><br />
 
           <div class="telefone-form hidden">
@@ -115,56 +115,58 @@
 
 
           <div class="container-assunto-e-titulo hidden">
-            <label class="assunto" for="opcoes">*Assunto </label>
+            <label for="opcoes">*Assunto </label>
 
             <div class="container-assunto hidden">
 
               <div class="assunto-form1">
                 <label class="opcoes">
-                  <input type="radio" name="opcoes" required>Levantamento Topográfico
+                  <input type="radio" name="opcoes" value="Levantamento topografico" required> Levantamento Topográfico
                 </label>
 
                 <label class="opcoes">
-                  <input type="radio" name="opcoes"> Locação de obra
+                  <input type="radio" name="opcoes" value="Locação de obra"> Locação de obra
                 </label>
 
                 <label class="opcoes">
-                  <input type="radio" name="opcoes">As Built
+                  <input type="radio" name="opcoes" value="As Built"> As Built
                 </label>
 
                 <label class="opcoes">
-                  <input type="radio" name="opcoes">Nivelamento
+                  <input type="radio" name="opcoes" value="Nivelamento"> Nivelamento
                 </label>
               </div>
 
               <div class="assunto-form2">
                 <label class="opcoes">
-                  <input type="radio" name="opcoes">Demarcação de terras
+                  <input type="radio" name="opcoes" value="Demarcação de terras"> Demarcação de terras
                 </label>
 
                 <label class="opcoes">
-                  <input type="radio" name="opcoes">Georreferenciamento
+                  <input type="radio" name="opcoes" value="Georreferenciamento"> Georreferenciamento
                 </label>
 
                 <label class="opcoes">
-                  <input type="radio" name="opcoes">Cálculo de volumetria
+                  <input type="radio" name="opcoes" value="Cálculo de volumetria"> Cálculo de volumetria
                 </label>
 
                 <label class="opcoes">
-                  <input type="radio" name="opcoes">Regularização de imóveis
+                  <input type="radio" name="opcoes" value="Regularização de Imoveis"> Regularização de imóveis
                 </label>
               </div>
             </div>
-          </div><br />
+          </div><br/>
 
           <div class="mensagem-form">
             <p>*Mensagem</p>
-            <textarea name="mensagem" maxlength="500" required>
+            <textarea id="mensagem-area" name="mensagem" maxlength="500" required>
               </textarea>
           </div><br />
 
           <div id="enviar">
-            <input type="submit" value="Enviar"></p>
+            <button id="botao" type="submit" onclick="enviar()">
+              <p>Enviar</p>
+            </button>
           </div>
 
         </fieldset>
@@ -236,8 +238,10 @@
     </div>
   </footer>
   </main>
+  <script src="JavaScript/localizacao.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./JavaScript/script.js"></script>
+  
 </body>
 
 </html>
