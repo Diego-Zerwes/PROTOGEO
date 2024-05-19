@@ -78,3 +78,33 @@ const toggleVisibility = (element, isVisible) => {
     element.classList.remove("show");
   }
 }
+
+const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
+
+function getDistanceFromTheTop(element){
+  const id = element.getAttribute("href");
+  if (id) {
+    const targetElement = document.querySelector(id);
+    if (targetElement) {
+      return targetElement.offsetTop;
+    }
+  }
+  return null; // ou alguma outra forma de indicar que o alvo não foi encontrado
+}
+
+function nativeScroll(distanceFromTheTop){
+  window.scroll({
+    top: distanceFromTheTop,
+    behavior: "smooth",
+  });
+}
+
+function scrollToSection(event){
+  event.preventDefault();
+  const distanceFromTheTop = getDistanceFromTheTop(event.target) - 90;
+  nativeScroll(distanceFromTheTop);
+}
+
+menuLinks.forEach((link) =>{
+  link.addEventListener("click", scrollToSection);
+})
