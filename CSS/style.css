@@ -75,35 +75,32 @@ ul {
   display: none;
 }
 
-.nos {
-  display: inline-block;
-  cursor: pointer;
-  padding: 10px;
-  
-}
 .sub {
   display: none;
   background-color: #444;
   padding: 10px;
+ 
 }
 
 #checkbox-menu {
   position: absolute;
   opacity: 0;
+  
 }
 
 label {
   cursor: pointer;
-  position: relative;
+  /* position: relative; */
   display: block;
   height: 22px;
+
 }
 
 label span {
   position: absolute;
   display: block;
   height: 5px;
-  width: 100%;
+  width: 50%;
   border-radius: 30px;
   background: #f16234;
   transition: 0.25s ease-in-out;
@@ -458,24 +455,20 @@ footer .rodape {
     width: 20%;
     height: 36px;
     display: flex;
-    align-items:self-end;
+    transform: translateX(180%) translateY(50%);
   }
-
- 
 
   #nav1.active #menu {
     height: calc(100vh - 70px);
     visibility: visible;
      overflow-y: visible;
-
-
   }
 
 
 
   #menu{
-    margin-top: 40px;
-    transform: translateX(30%);
+    margin-top: 22px;
+    transform: translateX(-17%);
     overflow-y: auto;
   }
 
@@ -483,7 +476,7 @@ footer .rodape {
     padding: 1rem 0;
     margin: 0 1rem;
     border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-    color: #444;
+    color: #fff;
     text-decoration: none;
   }
 
@@ -498,7 +491,7 @@ footer .rodape {
   }
 
  #menu li {
-  background: #fff;
+  background: #444;
  }
   
 
@@ -583,7 +576,48 @@ footer .rodape {
     height: 24px;
     display: flex;
   }
+  #nav1 {
+    width: 12%;
+    height: 30px;
+    display: flex;
+    transform: translateX(320%) translateY(60%);
+  }
 
+  #nav1.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+     overflow-y: visible;
+  }
+
+ 
+
+  #menu{
+    margin-top: 40px;
+    transform: translateX(30%);
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #checkbox-menu label{
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+ #menu li {
+  background: #444;
+ }
   .slogan {
     font-size: 64px;
     color: #eee;
@@ -610,6 +644,10 @@ footer .rodape {
 }
 /* NOTBOOK PEQUENO */
 @media only screen and (min-width: 992px) {
+  #nav1{
+    display: none;
+  }
+
   .menu .servico {
     display: flex;
     padding: 0.5rem 1rem;
@@ -623,11 +661,12 @@ footer .rodape {
     padding: 0.5rem 1rem;
     color: white;
     text-decoration: none;
+    justify-content: flex-start;
     align-items: center;
   }
 
   .sub{
-    transform: translateX(-180%) translateY(55%);
+    transform: translateX(-170%) translateY(55%);
   }
 
   .nav-toggle {
@@ -690,7 +729,9 @@ footer .rodape {
     color: #eee;
     width: 50%;
   }
-
+  .sub{
+    transform: translateX(-210%) translateY(55%);
+  }
   .container-slogan {
     display: flex;
     justify-content: center;
@@ -743,6 +784,9 @@ footer .rodape {
 }
 
 @media only screen and (min-width: 1680px) {
+  .sub{
+    transform: translateX(-210%) translateY(55%);
+  }
   .container-slogan {
     display: flex;
     justify-content: center;
@@ -767,6 +811,7 @@ footer .rodape {
     margin-top: 40px;
     border-radius: 15px;
   }
+  
 }
 
 /* FULL HD*/
@@ -775,6 +820,7 @@ footer .rodape {
   nav {
     transform: translateY(100%);
   }
+  
   .container-slogan {
     display: flex;
     justify-content: center;
