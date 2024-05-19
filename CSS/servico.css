@@ -193,13 +193,8 @@ label span:nth-child(3) {
       justify-content: space-evenly;
       padding: 5%;
     }
-<<<<<<< Updated upstream
-    
-    img{
-=======
   
     /* img{
->>>>>>> Stashed changes
       width: 100%;
     } */
   
@@ -555,6 +550,9 @@ label span:nth-child(3) {
   }
   /* NOTBOOK PEQUENO */
   @media only screen and (min-width: 992px) {
+    #nav1{
+      display: none;
+    }
     .menu .servico {
       display: flex;
        padding: 0.5rem 1rem; 

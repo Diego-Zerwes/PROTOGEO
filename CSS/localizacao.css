@@ -608,6 +608,9 @@ footer .rodape {
 
 /* NOTBOOK PEQUENO */
 @media only screen and (min-width: 992px) {
+  #nav1{
+    display: none;
+  }
   .menu li > a {
     display: flex;
     padding: 0.5rem 1rem;
