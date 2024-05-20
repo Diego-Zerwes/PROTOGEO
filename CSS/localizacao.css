@@ -57,17 +57,6 @@ ul {
   background: #db8708;
   border-radius: 10px;
 }
-.hidden {
-  opacity: 0;
-  transform: translateX(-50%);
-  filter: blur(5px);
-  transition: 0.5s;
-}
-.show {
-  opacity: 1;
-  transform: translateX(0%);
-  filter:blur(0px);
-}
 
 .menu li {
   display: flex;
@@ -85,35 +74,32 @@ ul {
   display: none;
 }
 
-.nos {
-  display: inline-block;
-  cursor: pointer;
-  padding: 10px;
-  
-}
 .sub {
   display: none;
   background-color: #444;
   padding: 10px;
+ 
 }
 
 #checkbox-menu {
   position: absolute;
   opacity: 0;
+  
 }
 
 label {
   cursor: pointer;
-  position: relative;
+  /* position: relative; */
   display: block;
   height: 22px;
+
 }
 
 label span {
   position: absolute;
   display: block;
   height: 5px;
-  width: 100%;
+  width: 50%;
   border-radius: 30px;
   background: #f16234;
   transition: 0.25s ease-in-out;
@@ -472,7 +458,7 @@ footer .rodape {
     width: 20%;
     height: 36px;
     display: flex;
-    transform: translateX(180%) translateY(30%);
+    transform: translateX(180%) translateY(50%);
   }
 
   #nav1.active #menu {
@@ -554,11 +540,23 @@ footer .rodape {
   .email-form input,
   .telefone-form input {
     width: 50%;
+    margin-right: 30px;
   }
 
   .container-assunto-e-titulo {
     gap: 25px;
   }
+
+  .container-assunto{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 70px;
+    margin-right: 50px;
+  }
+
   .opcoes {
     margin: 0.5em auto 0.5em;
     gap: 2px;

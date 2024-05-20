@@ -89,7 +89,7 @@ function getDistanceFromTheTop(element){
       return targetElement.offsetTop;
     }
   }
-  return null; // ou alguma outra forma de indicar que o alvo não foi encontrado
+  return null; 
 }
 
 function nativeScroll(distanceFromTheTop){
