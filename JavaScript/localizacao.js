@@ -1,7 +1,9 @@
 const button = document.getElementById("botao")
 
+
 const loading = () => {
     button.innerHTML = '<img src = "./imagens/Loading-PNG-Images.png" class = "loading">'
+    
 }
 
 const removeLoading = () => {
@@ -42,4 +44,8 @@ const mensagem = document.getElementById('mensagem-area').value
     })
 }
 
-document.querySelector('form').addEventListener('submit', handleSubmit)
+document.addEventListener('DOMContentLoaded', function(){
+    const termos = JSON.parse(localStorage.getItem('termos'));
+    console.log(termos)
+    button.disabled = !termos
+})

@@ -328,6 +328,10 @@ button {
   cursor: pointer; /* Adicionado cursor pointer para indicar que é clicável */
 }
 
+button:disabled{
+  opacity: 0.6;
+  background: gray;
+}
 button:hover {
   background-color: #623205;
   transform: scale(1.05);
