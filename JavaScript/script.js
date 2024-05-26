@@ -108,3 +108,22 @@ function scrollToSection(event){
 menuLinks.forEach((link) =>{
   link.addEventListener("click", scrollToSection);
 })
+
+const termo = document.getElementById('container-termo')
+const buttonAceitar = document.getElementById('aceitar');
+const buttonRecusar = document.getElementById('recusar');
+
+function aceitarRecusar(){
+  buttonAceitar.addEventListener('click', function(){
+    console.log('click')
+    localStorage.setItem("termos", JSON.stringify(true))
+    termo.style.display = "none";
+    
+  })
+  buttonRecusar.addEventListener('click', function(){
+    console.log('click')
+    localStorage.setItem("termos", JSON.stringify(false))
+    termo.style.display = "none";
+  })
+}
+aceitarRecusar()
