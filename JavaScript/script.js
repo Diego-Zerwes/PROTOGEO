@@ -57,7 +57,7 @@ btnMobile.addEventListener('click', toggleMenu);
 
 
 const hiddenElements = document.querySelectorAll(".hidden");
-const animeElements = document.querySelectorAll(".anime");
+// const animeElements = document.querySelectorAll(".anime");
 
 const intersectionObserver = new IntersectionObserver((entries)=>{
   entries.forEach((entry)=>{
@@ -78,6 +78,7 @@ const toggleVisibility = (element, isVisible) => {
     element.classList.remove("show");
   }
 }
+
 
 const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
 
