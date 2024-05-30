@@ -46,7 +46,6 @@ ul {
   padding: 10px;
   flex-direction: column;
   align-items: center;
-
 }
 
 #nav1 li {
@@ -67,7 +66,7 @@ ul {
 .show {
   opacity: 1;
   transform: translateX(0%);
-  filter:blur(0px);
+  filter: blur(0px);
 }
 
 .menu li {
@@ -81,6 +80,13 @@ ul {
   display: block;
 }
 
+.menu .servico:hover i{
+  transform: rotate(180deg);
+}
+
+.menu .servico i{
+  transition: all 0.3s ease;
+}
 
 #nav1 {
   display: none;
@@ -90,7 +96,6 @@ ul {
   display: inline-block;
   cursor: pointer;
   padding: 10px;
-  
 }
 .sub {
   display: none;
@@ -139,15 +144,14 @@ label span:nth-child(3) {
   color: #f16234;
 }
 
-#checkbox-menu.active  + label span:nth-child(2) {
+#checkbox-menu.active + label span:nth-child(2) {
   opacity: 0;
 }
 
-#checkbox-menu.active  + label span:nth-child(3) {
+#checkbox-menu.active + label span:nth-child(3) {
   transform: rotate(45deg);
   top: 8px;
 }
-
 
 .decoracao {
   margin: 0;
@@ -327,6 +331,9 @@ footer .rodape {
   nav {
     position: absolute;
   }
+  .colored {
+    transform: translateY(5%);
+  }
   .menu .servico {
     display: none;
   }
@@ -384,10 +391,10 @@ footer .rodape {
   #nav1.active #menu {
     height: calc(100vh - 70px);
     visibility: visible;
-     overflow-y: visible;
+    overflow-y: visible;
   }
 
-  #menu{
+  #menu {
     margin-top: 22px;
     transform: translateX(-17%);
     overflow-y: auto;
@@ -401,7 +408,7 @@ footer .rodape {
     text-decoration: none;
   }
 
-  #checkbox-menu label{
+  #checkbox-menu label {
     display: flex;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -411,9 +418,9 @@ footer .rodape {
     gap: 0.5rem;
   }
 
- #menu li {
-  background: #444;
- }
+  #menu li {
+    background: #444;
+  }
 
   .fundoCinza,
   .fundoBranco {
@@ -458,12 +465,10 @@ footer .rodape {
   #nav1.active #menu {
     height: calc(100vh - 70px);
     visibility: visible;
-     overflow-y: visible;
+    overflow-y: visible;
   }
 
- 
-
-  #menu{
+  #menu {
     margin-top: 29px;
     transform: translateX(-16%);
     overflow-y: auto;
@@ -477,7 +482,7 @@ footer .rodape {
     text-decoration: none;
   }
 
-  #checkbox-menu label{
+  #checkbox-menu label {
     display: flex;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -487,9 +492,9 @@ footer .rodape {
     gap: 0.5rem;
   }
 
- #menu li {
-  background: #444;
- }
+  #menu li {
+    background: #444;
+  }
 
   .slogan {
     font-size: 64px;
@@ -528,7 +533,7 @@ footer .rodape {
 
 /* NOTBOOK PEQUENO */
 @media only screen and (min-width: 992px) {
-  #nav1{
+  #nav1 {
     display: none;
   }
   .menu .servico {
@@ -547,7 +552,7 @@ footer .rodape {
     align-items: center;
   }
 
-  .sub{
+  .sub {
     transform: translateX(-30%) translateY(55%);
   }
 

@@ -69,6 +69,13 @@ ul {
   display: block;
 }
 
+.menu .servico:hover i{
+  transform: rotate(180deg);
+}
+
+.menu .servico i{
+  transition: all 0.3s ease;
+}
 
 #nav1 {
   display: none;
@@ -321,6 +328,9 @@ label span:nth-child(3) {
   @media only screen and (max-width: 550px) {
     nav {
       position: absolute;
+    }
+    .colored {
+      transform: translateY(5%);
     }
     .menu .servico {
       display: none;
