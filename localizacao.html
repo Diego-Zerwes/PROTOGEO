@@ -25,6 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="stylesheet" href="CSS/localizacao.css">
 
@@ -41,7 +42,7 @@
         </a>
       </div>
       <ul class="menu">
-        <li class="servico" onmouseover="mostraSub('sub1')" onmouseleave="escondeSub('sub1')"><a href="servico.html">SERVIÇO <img src="./imagens/arrow_drop_down_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+        <li class="servico" onmouseover="mostraSub('sub1')" onmouseleave="escondeSub('sub1')"><a href="servico.html">SERVIÇO <i class='bx bx-chevron-down' style='color:#f4f4f4'></i></a>
           <ul class="sub" id="sub1">
             <li><a href="servico.html#container-servico_1">Levantamento Topográfico</a></li>
             <li><a href="servico.html#container-servico_2">Locação de Obra</a></li>
@@ -55,7 +56,7 @@
         </li>
         <li>
           <a href="SobreNos.html">PROTOGEO</a>
-         
+
 
         </li>
         <li>
@@ -164,14 +165,16 @@
                 </label>
               </div>
             </div>
-          </div><br/>
+          </div><br />
 
           <div class="mensagem-form hidden">
             <p>*Mensagem</p>
-            <textarea id="mensagem-area" name="mensagem" maxlength="500" required>
+            <textarea id="mensagem-area" name="mensagem" required>
               </textarea>
           </div><br />
-
+          <label class="opcoes">
+            <input type="radio" name="opcoes" value="termo de privacidade"> termo de privacidade
+          </label>
           <div id="enviar">
             <button id="botao" type="submit" onclick="enviar()">
               <p>Enviar</p>
@@ -247,11 +250,11 @@
     </div>
   </footer>
   </main>
-  
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="JavaScript/localizacao.js"></script>
   <script src="./JavaScript/script.js"></script>
-  
+
 </body>
 
 </html>

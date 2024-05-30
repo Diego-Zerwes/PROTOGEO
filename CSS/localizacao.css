@@ -45,7 +45,6 @@ ul {
   padding: 10px;
   flex-direction: column;
   align-items: center;
-
 }
 
 #nav1 li {
@@ -69,6 +68,13 @@ ul {
   display: block;
 }
 
+.menu .servico:hover i{
+  transform: rotate(180deg);
+}
+
+.menu .servico i{
+  transition: all 0.3s ease;
+}
 
 #nav1 {
   display: none;
@@ -78,13 +84,11 @@ ul {
   display: none;
   background-color: #444;
   padding: 10px;
- 
 }
 
 #checkbox-menu {
   position: absolute;
   opacity: 0;
-  
 }
 
 label {
@@ -92,7 +96,6 @@ label {
   /* position: relative; */
   display: block;
   height: 22px;
-
 }
 
 label span {
@@ -123,15 +126,14 @@ label span:nth-child(3) {
   color: #f16234;
 }
 
-#checkbox-menu.active  + label span:nth-child(2) {
+#checkbox-menu.active + label span:nth-child(2) {
   opacity: 0;
 }
 
-#checkbox-menu.active  + label span:nth-child(3) {
+#checkbox-menu.active + label span:nth-child(3) {
   transform: rotate(45deg);
   top: 8px;
 }
-
 
 .decoracao {
   margin: 0;
@@ -274,27 +276,33 @@ input[type="radio"] {
   font-variation-settings: "slnt" 0;
   color: #444444;
   gap: 25px;
-  
 }
-.container-assunto{
+.container-assunto {
   display: flex;
   width: 100%;
   gap: 100px;
   justify-content: flex-start;
 }
 
-.opcoes{
+.opcoes {
   width: 50%;
   height: auto;
 }
 
-.assunto{
+.assunto {
   width: 50%;
   display: flex;
   justify-content: flex-end;
 }
-
-.assunto-form1, .assunto-form2{
+#mensagem-area {
+  padding: 0;
+  margin: 0;
+  white-space: unset;
+  border: none;
+  outline: none;
+}
+.assunto-form1,
+.assunto-form2 {
   width: 20%;
 }
 .mensagem-form {
@@ -328,7 +336,7 @@ button {
   cursor: pointer; /* Adicionado cursor pointer para indicar que é clicável */
 }
 
-button:disabled{
+button:disabled {
   opacity: 0.6;
   background: gray;
 }
@@ -342,17 +350,17 @@ button:active {
   box-shadow: none;
 }
 
-.loading{
+.loading {
   width: 30px;
   animation: spin 1s infinite linear;
 }
 
 @keyframes spin {
-  from{
+  from {
     transform: rotate(0deg);
   }
 
-  to{
+  to {
     transform: rotate(360deg);
   }
 }
@@ -446,6 +454,9 @@ footer .rodape {
   nav {
     position: absolute;
   }
+  .colored {
+    transform: translateY(5%);
+  }
   .menu .servico {
     display: none;
   }
@@ -468,12 +479,10 @@ footer .rodape {
   #nav1.active #menu {
     height: calc(100vh - 70px);
     visibility: visible;
-     overflow-y: visible;
+    overflow-y: visible;
   }
 
-
-
-  #menu{
+  #menu {
     margin-top: 22px;
     transform: translateX(-17%);
     overflow-y: auto;
@@ -487,7 +496,7 @@ footer .rodape {
     text-decoration: none;
   }
 
-  #checkbox-menu label{
+  #checkbox-menu label {
     display: flex;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -497,9 +506,9 @@ footer .rodape {
     gap: 0.5rem;
   }
 
- #menu li {
-  background: #444;
- }
+  #menu li {
+    background: #444;
+  }
 
   #header .logo img {
     max-width: 80%;
@@ -530,10 +539,9 @@ footer .rodape {
     width: 60%;
     border-radius: 15px;
   }
-  .logo img{
+  .logo img {
     width: 100%;
     height: 100%;
-    
   }
 
   form {
@@ -551,7 +559,7 @@ footer .rodape {
     gap: 25px;
   }
 
-  .container-assunto{
+  .container-assunto {
     display: flex;
     width: 100%;
     justify-content: flex-start;
@@ -596,12 +604,10 @@ footer .rodape {
   #nav1.active #menu {
     height: calc(100vh - 70px);
     visibility: visible;
-     overflow-y: visible;
+    overflow-y: visible;
   }
 
- 
-
-  #menu{
+  #menu {
     margin-top: 29px;
     transform: translateX(-16%);
     overflow-y: auto;
@@ -615,7 +621,7 @@ footer .rodape {
     text-decoration: none;
   }
 
-  #checkbox-menu label{
+  #checkbox-menu label {
     display: flex;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -625,18 +631,17 @@ footer .rodape {
     gap: 0.5rem;
   }
 
- #menu li {
-  background: #444;
- }
+  #menu li {
+    background: #444;
+  }
 
   .slogan img {
     max-width: 320px;
   }
 
-  .logo img{
+  .logo img {
     width: 70%;
     height: 80%;
-    
   }
   form {
     width: 80%;
@@ -645,7 +650,7 @@ footer .rodape {
 
 /* NOTBOOK PEQUENO */
 @media only screen and (min-width: 992px) {
-  #nav1{
+  #nav1 {
     display: none;
   }
   .menu li > a {
@@ -656,7 +661,7 @@ footer .rodape {
     align-items: center;
   }
 
-  .sub{
+  .sub {
     transform: translateX(-170%) translateY(55%);
   }
 
@@ -715,7 +720,7 @@ footer .rodape {
 
 /* NOTBOOK MEDIO */
 @media only screen and (min-width: 1440px) {
-  .sub{
+  .sub {
     transform: translateX(-210%) translateY(55%);
   }
   .slogan {
@@ -746,10 +751,9 @@ footer .rodape {
     margin-top: 40px;
     border-radius: 15px;
   }
-  .logo img{
+  .logo img {
     width: 50%;
     height: 10%;
-    
   }
 
   section#menu-baixo {
@@ -780,7 +784,7 @@ footer .rodape {
 }
 
 @media only screen and (min-width: 1680px) {
-  .sub{
+  .sub {
     transform: translateX(-210%) translateY(55%);
   }
   .container-slogan {
