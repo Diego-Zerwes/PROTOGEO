@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   right: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 nav {
@@ -173,7 +173,7 @@ label span:nth-child(3) {
 }
 .slogan p {
   display: flex;
-  font-size: 46px;
+  font-size: 40px;
   width: 150%;
   justify-content: flex-start;
   color: #141414;

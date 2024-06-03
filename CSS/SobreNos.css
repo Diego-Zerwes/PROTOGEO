@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Inter", sans-serif; */
 }
 
 nav {
@@ -239,7 +238,7 @@ label span:nth-child(3) {
   width: 35%;
   text-align: justify;
   padding: 10px;
-  font-size: 24px;
+  font-size: 20px;
 }
 .imagemEquipe img {
   width: 80%;
