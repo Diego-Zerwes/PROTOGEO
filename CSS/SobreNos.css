@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  right: 0;
+  box-sizing: border-box; 
 }
 
 nav {
@@ -15,7 +16,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  position: relative;
   position: fixed;
   transform: translateY(70%);
   border-radius: 15px;
@@ -32,8 +32,12 @@ nav {
 .sub {
   display: none;
   position: absolute;
-  transform: translateX(-220%) translateY(55%);
+  transform: translateX(-155%) translateY(0%);
+  display: none;
+  background-color: #444;
+  padding: 10px;
 }
+
 ul {
   list-style: none;
   color: #141414;
@@ -52,29 +56,40 @@ ul {
   background-color: #fff;
   padding: 10px;
 }
+
 .menu a:hover {
   background: #db8708;
   border-radius: 10px;
 }
+
 .hidden {
   opacity: 0;
   transform: translateX(-50%);
   filter: blur(5px);
   transition: 0.5s;
 }
+
 .show {
   opacity: 1;
   transform: translateX(0%);
-  filter: blur(0px);
+  filter:blur(0px);
 }
 
-.menu li {
+.menu li > a {
   display: flex;
   padding: 0.5rem 1rem;
-  color: #444;
+  color: white;
   text-decoration: none;
+  justify-content: flex-start;
   align-items: center;
+  font-size: 15px;
+  font-family: "Poppins";
+  }
+
+.menu li {
+  padding: 0.5rem 1rem; 
 }
+
 .menu img {
   display: block;
 }
@@ -91,17 +106,6 @@ ul {
   display: none;
 }
 
-.nos {
-  display: inline-block;
-  cursor: pointer;
-  padding: 10px;
-}
-.sub {
-  display: none;
-  background-color: #444;
-  padding: 10px;
-}
-
 #checkbox-menu {
   position: absolute;
   opacity: 0;
@@ -109,17 +113,15 @@ ul {
 
 label {
   cursor: pointer;
-  position: relative;
   display: block;
   height: 22px;
-  width: 30px;
 }
 
 label span {
   position: absolute;
   display: block;
   height: 5px;
-  width: 100%;
+  width: 40px;
   border-radius: 30px;
   background: #f16234;
   transition: 0.25s ease-in-out;
@@ -143,11 +145,11 @@ label span:nth-child(3) {
   color: #f16234;
 }
 
-#checkbox-menu.active + label span:nth-child(2) {
+#checkbox-menu.active  + label span:nth-child(2) {
   opacity: 0;
 }
 
-#checkbox-menu.active + label span:nth-child(3) {
+#checkbox-menu.active  + label span:nth-child(3) {
   transform: rotate(45deg);
   top: 8px;
 }
@@ -160,6 +162,7 @@ label span:nth-child(3) {
   border-radius: 0px 0px 50px 50px;
   background: linear-gradient(90deg, #b55700 50%, #ffc700 100%);
 }
+
 .imagem_de_fundo {
   top: 0;
   background-image: url("../imagens/background-header.jpg");
@@ -167,41 +170,49 @@ label span:nth-child(3) {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   padding: 0rem 0rem;
 }
+
 .slogan {
-  color: #eee;
-  width: 150%;
   display: flex;
-  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  gap: 10%;
 }
-.slogan p {
-  display: flex;
-  font-size: 46px;
-  width: 150%;
-  justify-content: flex-start;
-  color: #141414;
+
+.slogan p{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+  width: 30%;
+  color: #444;
+}
+
+.slogan img{
+  width: 300px;
+  border-radius: 10px;
 }
 
 .logo img {
-  max-width: 540px;
-  max-height: 340px;
+  width: 350px;
+}
+
+#header .logo img {
+  max-width: 100%;
 }
 
 .colored {
-  /* background: #333; */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-  /* position: relative !important; */
   transform: translateY(5%);
 }
-.titulo_equipe {
-  font-family: "Poppins", sans-serif;
-}
+
+/*-----------------------------------------------*/
+
 .SobreNos {
   background: #f7f7f7f7;
 }
@@ -209,96 +220,105 @@ label span:nth-child(3) {
 .fundoCinza {
   display: flex;
   background: #f7f7f7;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  padding: 8% 1%;
 }
 
-.textoExplicativo {
-  width: 35%;
-  text-align: justify;
-  padding: 10px;
-  font-size: 20px;
-}
-
-.imagemsobre img {
-  width: 80%;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.436);
-}
 .fundoBranco {
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row-reverse;
+  background: #f7f7f7;
+  justify-content: space-around;
   align-items: center;
-  padding: 8% 1%;
   background: #f7e9b436;
 }
-.textoEquipe {
-  width: 35%;
-  text-align: justify;
-  padding: 10px;
-  font-size: 20px;
-}
-.imagemEquipe img {
-  width: 80%;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.436);
-}
-.titulo_equipe {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10%;
-  color: #b45600;
+
+.titulo_equipe h3{
+  text-align: center;
+  color: #B45600;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
 }
 
-/*aqui*/
-#menu-baixo {
-  height: 450px;
+.descricao p{
+  color: #444;
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.36px;
+}
+
+.textoEquipe, .textoExplicativo{
+  width: 50%;
+  margin: 5% 0%;
+}
+
+.imagemsobre img, .imagemEquipe img {
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.436);
+  margin: 5% 0%;
+}
+
+
+.show {
+  opacity: 1;
+  transform: translateX(0%);
+  filter:blur(0px);
+}
+
+/*-----------------------------------------------*/
+
+#menu-baixo{
+  height: 250px;
   width: 100%;
   display: flex;
   background-color: #1e1e1e;
   color: #fff;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: normal;
 }
 
-.logo-rodape {
+.logo-rodape{
   display: flex;
+  margin-top: 20px;
 }
 
-.sobre .container-sobre {
+.sobre .container-sobre{
   display: flex;
 }
-
 .container {
   display: flex;
+  justify-content: center;
 }
-
 .menu-links {
   display: flex;
   color: #fff;
   flex-direction: row;
-  align-items: center;
+  align-items: center;    
 }
 
-.menu-links ul {
+.menu-links ul{
   list-style: none;
-
   display: flex;
   flex-direction: column;
 }
 
-.menu-links ul a {
-  color: #fff;
-  text-decoration: none;
+.menu-links ul a{
+  color: #fff; 
+  text-decoration: none; 
 }
 
-.titulo-rodape {
+.titulo-rodape{
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -307,7 +327,7 @@ label span:nth-child(3) {
   flex-wrap: nowrap;
 }
 
-.titulo-rodape ul {
+.titulo-rodape ul{
   display: flex;
   height: 50px;
   width: 100%;
@@ -317,74 +337,39 @@ label span:nth-child(3) {
   list-style: none;
 }
 
-footer .rodape {
+footer .rodape{
   display: flex;
   flex-direction: column;
   text-align: center;
   background-color: #1e1e1e;
   color: #fff;
   padding: 10px;
+  
 }
-/* CELULAR */
-@media only screen and (max-width: 550px) {
-  nav {
-    position: absolute;
-  }
-  .colored {
-    transform: translateY(5%);
-  }
+
+/*-----------------------------------------------*/
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
   .menu .servico {
     display: none;
   }
+
   .menu li > a {
     display: none;
   }
+
   .nav-toggle {
-    width: 80%;
+    width: 10%;
     height: 24px;
     display: flex;
-  }
-
-  #header .logo img {
-    max-width: 80%;
-  }
-
-  .imagem_de_fundo {
-    width: 100%;
-    display: flex;
-  }
-
-  .slogan {
-    width: 100%;
-    height: 40vh;
-    flex-direction: column-reverse;
-    margin-top: 15%;
-    margin-left: -5%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .slogan p {
-    width: 50%;
-    font-size: 24px;
-    margin-top: 5px;
-  }
-
-  .slogan img {
-    width: 60%;
-    border-radius: 15px;
-  }
-
-  .logo img {
-    width: 100%;
-    height: 100%;
   }
 
   #nav1 {
     width: 20%;
     height: 36px;
     display: flex;
-    transform: translateX(180%) translateY(30%);
+    transform: translateX(180%) translateY(50%);
   }
 
   #nav1.active #menu {
@@ -393,7 +378,7 @@ footer .rodape {
     overflow-y: visible;
   }
 
-  #menu {
+  #menu{
     margin-top: 22px;
     transform: translateX(-17%);
     overflow-y: auto;
@@ -407,7 +392,7 @@ footer .rodape {
     text-decoration: none;
   }
 
-  #checkbox-menu label {
+  #checkbox-menu label{
     display: flex;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -421,29 +406,70 @@ footer .rodape {
     background: #444;
   }
 
-  .fundoCinza,
-  .fundoBranco {
+  .imagem_de_fundo {
+    width: 100%;
     display: flex;
+  }
+
+  .slogan {
+    width: 100%;
+    flex-direction: column-reverse;
+    margin-top: 15%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slogan img {
+    width: 200px;
+    padding-bottom: 15px;
+  }
+
+  .slogan p {
+    width: 50%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .fundoCinza{
     flex-direction: column-reverse;
   }
-  .fundoCinza .imagemsobre,
-  .imagemEquipe {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
+  
+  .fundoBranco {
+    flex-direction: column;
   }
 
   .textoEquipe,
   .textoExplicativo {
+    width: 90%;
+  }
+
+  #menu-baixo{
+    height: 450px;
     width: 100%;
+    display: flex;
+    background-color: #1e1e1e;
+    color: #fff;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
   }
 }
 
-/* Tablet */
-@media only screen and (min-width: 550px) {
+/*-----------------------------------------------*/
+
+@media only screen and (min-width: 481px) and (max-width: 767.9px) {
+
+  .logo img {
+    width: 250px;
+  }
+
   .menu .servico {
     display: none;
   }
+
   .menu li > a {
     display: none;
   }
@@ -455,10 +481,10 @@ footer .rodape {
   }
 
   #nav1 {
-    width: 12%;
-    height: 30px;
+    width: 20%;
+    height: 36px;
     display: flex;
-    transform: translateX(360%) translateY(40%);
+    transform: translateX(180%) translateY(50%);
   }
 
   #nav1.active #menu {
@@ -467,9 +493,9 @@ footer .rodape {
     overflow-y: visible;
   }
 
-  #menu {
-    margin-top: 29px;
-    transform: translateX(-16%);
+  #menu{
+    margin-top: 22px;
+    transform: translateX(-17%);
     overflow-y: auto;
   }
 
@@ -481,7 +507,7 @@ footer .rodape {
     text-decoration: none;
   }
 
-  #checkbox-menu label {
+  #checkbox-menu label{
     display: flex;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -495,269 +521,242 @@ footer .rodape {
     background: #444;
   }
 
+  .imagem_de_fundo {
+    width: 100%;
+    display: flex;
+  }
+
   .slogan {
-    font-size: 64px;
-    color: #eee;
-    width: 50%;
-    gap: 20px;
-    transform: translateX(20%) translateY(80%);
+    width: 100%;
+    flex-direction: column-reverse;
+    margin-top: 11%;
+    justify-content: center;
+    align-items: center;
   }
 
   .slogan img {
-    max-width: 320px;
+    width: 200px;
+    padding-bottom: 20px;
   }
 
-  .logo img {
-    width: 70%;
-    height: 80%;
+  .slogan p {
+    width: 50%;
+    font-size: 18px;
+    text-align: center;
   }
 
-  .fundoCinza,
-  .fundoBranco {
-    display: flex;
+  .fundoCinza{
     flex-direction: column-reverse;
   }
-  .fundoCinza .imagemsobre,
-  .imagemEquipe {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
+  
+  .fundoBranco {
+    flex-direction: column;
   }
 
   .textoEquipe,
   .textoExplicativo {
+    width: 90%;
+  }
+
+  #menu-baixo{
+    height: 450px;
     width: 100%;
+    display: flex;
+    background-color: #1e1e1e;
+    color: #fff;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
   }
 }
 
-/* NOTBOOK PEQUENO */
-@media only screen and (min-width: 992px) {
-  #nav1 {
-    display: none;
-  }
-  .menu .servico {
-    display: flex;
-    padding: 0.5rem 1rem;
-    color: rgb(68, 68, 68);
-    text-decoration: none;
-    align-items: center;
-    cursor: pointer;
-  }
-  .menu li > a {
-    display: flex;
-    padding: 0.5rem 1rem;
-    color: white;
-    text-decoration: none;
-    align-items: center;
+/*-----------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .logo img {
+    width: 300px;
   }
 
-  .sub {
-    transform: translateX(-30%) translateY(55%);
+  .menu .servico {
+    display: none;
+  }
+
+  .menu li > a {
+    display: none;
   }
 
   .nav-toggle {
-    display: none;
+    width: 10%;
+    height: 24px;
+    display: flex;
   }
 
-  .container-slogan {
+  #nav1 {
+    width: 20%;
+    height: 36px;
     display: flex;
-    justify-content: center;
+    transform: translateX(180%) translateY(50%);
   }
+
+  #nav1.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: visible;
+  }
+
+  #menu{
+    margin-top: 22px;
+    transform: translateX(-17%);
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #checkbox-menu label{
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #menu li {
+    background: #444;
+  }
+
+  .imagem_de_fundo {
+    width: 100%;
+    display: flex;
+  }
+
   .slogan {
-    font-size: 64px;
-    color: #eee;
-    width: 50%;
+    width: 100%;
+    margin-top: 9%;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    transform: translateX(-15%) translateY(5%);
-  }
-  .slogan p {
-    margin: 10% 10%;
-  }
-  .slogan img {
-    max-width: 340px;
-    max-height: 240px;
-    flex-shrink: 0;
-    margin-top: 40px;
-    border-radius: 15px;
-  }
-  .fundoCinza,
-  .fundoBranco {
-    display: flex;
-    flex-direction: row;
   }
 
+  .slogan img {
+    width: 250px;
+  }
+
+  .slogan p {
+    font-size: 25px;
+    text-align: left;
+  }
+
+  .fundoCinza{
+    flex-direction: column-reverse;
+  }
+  
   .fundoBranco {
-    flex-direction: row-reverse;
+    flex-direction: column;
   }
-  .imagemsobre img {
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.436);
-  }
+
   .textoEquipe,
   .textoExplicativo {
-    width: 40%;
-    font-size: 18px;
-    font-family: "Inter", sans-serif;
+    width: 90%;
   }
 
-  section#menu-baixo {
-    display: flex;
-    flex-direction: row;
+  #menu-baixo{
+    height: 450px;
     width: 100%;
-    height: 250px;
-    justify-content: space-evenly;
-  }
-  .container {
     display: flex;
+    background-color: #1e1e1e;
+    color: #fff;
+    align-items: center;
     flex-direction: column;
-  }
-  .menu-links {
-    display: flex;
-    justify-content: center;
-    width: 20%;
-    margin-top: 2%;
-  }
-  .titulo-rodape {
-    display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
   }
 }
 
-/* NOTBOOK MEDIO */
-@media only screen and (min-width: 1440px) {
-  .slogan {
-    font-size: 64px;
-    color: #eee;
-    width: 50%;
-  }
+/*-----------------------------------------------*/
 
-  .container-slogan {
-    display: flex;
-    justify-content: center;
-  }
-  .slogan {
-    display: flex;
-    align-items: center;
-    margin-left: 25%;
-    font-size: 64px;
-    color: #eee;
-    width: 100%;
-  }
-  .slogan p {
-    margin: 10% 15%;
-  }
-  .slogan img {
-    width: 340px;
-    height: 240px;
-    flex-shrink: 0;
-    margin-top: 40px;
-    border-radius: 15px;
-  }
+@media only screen and (min-width: 1281px) {
 
   .logo img {
-    width: 50%;
-    height: 10%;
+    width: 300px;
   }
 
-  section#menu-baixo {
+  .logo-rodape{
+    margin-top: 20px;
+  }
+
+  .nav-toggle {
+    width: 10%;
+    height: 24px;
     display: flex;
-    flex-direction: row;
+  }
+
+  #nav1.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: visible;
+  }
+
+  #menu{
+    margin-top: 22px;
+    transform: translateX(-17%);
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #checkbox-menu label{
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #menu li {
+    background: #444;
+  }
+
+  .imagem_de_fundo {
     width: 100%;
-    height: 250px;
-    justify-content: space-evenly;
-  }
-  .container {
     display: flex;
-    flex-direction: column;
   }
-  .menu-links {
-    display: flex;
-    justify-content: center;
-    width: 20%;
-    margin-top: 2%;
-  }
-  .titulo-rodape {
-    display: flex;
 
-    justify-content: flex-end;
-  }
-}
-
-@media only screen and (min-width: 1680px) {
-  .container-slogan {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
   .slogan {
-    display: flex;
-    align-items: center;
-    font-size: 64px;
-    color: #eee;
-    width: 65%;
-  }
-  .slogan p {
-    display: flex;
-    margin: 15% 10%;
-    align-items: flex-start;
-  }
-  .slogan img {
-    width: 340px;
-    height: 240px;
-    flex-shrink: 0;
-    margin-top: 40px;
-    border-radius: 15px;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  nav {
-    transform: translateY(100%);
-  }
-  .container-slogan {
-    display: flex;
+    width: 100%;
+    margin-top: 9%;
     justify-content: center;
-    width: 100%;
-  }
-  .slogan {
-    display: flex;
     align-items: center;
-    font-size: 64px;
-    color: #eee;
-    width: 100%;
+    gap: 20px;
   }
-  .slogan p {
-    width: 40%;
-    margin: 10% 10%;
-  }
+
   .slogan img {
-    width: 540px;
-    height: 340px;
-    flex-shrink: 0;
-    margin-top: 40px;
-    border-radius: 15px;
+    width: 350px;
   }
 
-  section#menu-baixo {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 250px;
-    justify-content: space-evenly;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-  .menu-links {
-    display: flex;
-    justify-content: center;
-    width: 40%;
-  }
-  .titulo-rodape {
-    display: flex;
-
-    justify-content: flex-end;
+  .slogan p {
+    font-size: 36px;
+    text-align: left;
   }
 }

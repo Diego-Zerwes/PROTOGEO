@@ -1,7 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  right: 0;
+  box-sizing: border-box; 
 }
 
 nav {
@@ -15,7 +16,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  position: relative;
   position: fixed;
   transform: translateY(70%);
   border-radius: 15px;
@@ -32,8 +32,12 @@ nav {
 .sub {
   display: none;
   position: absolute;
-  transform: translateX(-220%) translateY(55%);
+  transform: translateX(-155%) translateY(0%);
+  display: none;
+  background-color: #444;
+  padding: 10px;
 }
+
 ul {
   list-style: none;
   color: #141414;
@@ -45,7 +49,6 @@ ul {
   padding: 10px;
   flex-direction: column;
   align-items: center;
-
 }
 
 #nav1 li {
@@ -53,18 +56,40 @@ ul {
   background-color: #fff;
   padding: 10px;
 }
+
 .menu a:hover {
   background: #db8708;
   border-radius: 10px;
 }
 
-.menu li {
+.hidden {
+  opacity: 0;
+  transform: translateX(-50%);
+  filter: blur(5px);
+  transition: 0.5s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0%);
+  filter:blur(0px);
+}
+
+.menu li > a {
   display: flex;
   padding: 0.5rem 1rem;
-  color: #444;
+  color: white;
   text-decoration: none;
+  justify-content: flex-start;
   align-items: center;
+  font-size: 15px;
+  font-family: "Poppins";
+  }
+
+.menu li {
+  padding: 0.5rem 1rem; 
 }
+
 .menu img {
   display: block;
 }
@@ -81,18 +106,6 @@ ul {
   display: none;
 }
 
-.nos {
-  display: inline-block;
-  cursor: pointer;
-  padding: 10px;
-  
-}
-.sub {
-  display: none;
-  background-color: #444;
-  padding: 10px;
-}
-
 #checkbox-menu {
   position: absolute;
   opacity: 0;
@@ -100,17 +113,15 @@ ul {
 
 label {
   cursor: pointer;
-  position: relative;
   display: block;
   height: 22px;
-  width: 30px;
 }
 
 label span {
   position: absolute;
   display: block;
   height: 5px;
-  width: 100%;
+  width: 40px;
   border-radius: 30px;
   background: #f16234;
   transition: 0.25s ease-in-out;
@@ -143,7 +154,6 @@ label span:nth-child(3) {
   top: 8px;
 }
 
-
 .decoracao {
   margin: 0;
   width: 100%;
@@ -152,6 +162,7 @@ label span:nth-child(3) {
   border-radius: 0px 0px 50px 50px;
   background: linear-gradient(90deg, #b55700 50%, #ffc700 100%);
 }
+
 .imagem_de_fundo {
   top: 0;
   background-image: url("../imagens/background-header.jpg");
@@ -159,106 +170,117 @@ label span:nth-child(3) {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   padding: 0rem 0rem;
 }
+
 .slogan {
-  color: #eee;
-  width: 150%;
   display: flex;
-  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  gap: 10%;
 }
-.slogan p {
-  display: flex;
-  font-size: 46px;
-  width: 150%;
-  justify-content: flex-start;
-  color: #141414;
+
+.slogan p{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+  width: 30%;
+  color: #444;
+}
+
+.slogan img{
+  width: 300px;
+  border-radius: 10px;
 }
 
 .logo img {
-  max-width: 540px;
-  max-height: 340px;
+  width: 350px;
+}
+
+#header .logo img {
+  max-width: 100%;
 }
 
 .colored {
-  /* background: #333; */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-  /* position: relative !important; */
   transform: translateY(5%);
 }
+
+/*-----------------------------------------------*/
   
     /* BRENO */
 
-    #container-servico_1, #container-servico_2, #container-servico_3, #container-servico_4, #container-servico_5, #container-servico_6, #container-servico_7, #container-servico_8{
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      padding: 5%;
-    }
-  
-    /* img{
-      width: 100%;
-    } */
-  
-    #container-servico_1, #container-servico_3, #container-servico_5, #container-servico_7{
-      background-color: #f7e9b436;
-    }
-    .hidden {
-      opacity: 0;
-      transform: translateX(-50%);
-      filter: blur(5px);
-      transition: 0.5s;
-    }
-    .show {
-      opacity: 1;
-      transform: translateX(0%);
-      filter:blur(0px);
-    }
+  #container-servico_1, #container-servico_2, #container-servico_3, #container-servico_4, #container-servico_5, #container-servico_6, #container-servico_7, #container-servico_8{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 
-  
-    .titulo_saiba_mais h3{
-      text-align: center;
-    }
-  
-    .descricao p{
-      text-align: justify;
-      font-family: "Poppins", sans-serif;
-      font-weight: 300;
-      font-style: normal;
-      font-size: 21px;
-    }
-  
-    .descricao_servico{
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .descricao_servico{
-      width: 35%;
-    }
-  
-    /* p, h3{
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    } */
-  
+  #container-servico_1, #container-servico_3, #container-servico_5, #container-servico_7{
+    background-color: #f7e9b436;
+  }
+
+  .imagem_servico img{
+    border-radius: 10px;
+    width: 350px;
+  }   
+
+  .imagem_servico{
+    margin: 5% 0%;
+  }
+
+  .titulo_saiba_mais h3{
+    text-align: center;
+    color: #B45600;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .descricao p{
+    color: #444;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.36px;
+  }
+
+  .descricao_servico{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 5% 0%;
+  }
+
+  .show {
+    opacity: 1;
+    transform: translateX(0%);
+    filter:blur(0px);
+  }
+
     /* FINAL BRENO */
+
+    /*-----------------------------------------------*/
   
   #menu-baixo{
-    height: 450px;
+    height: 250px;
     width: 100%;
     display: flex;
     background-color: #1e1e1e;
     color: #fff;
     align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-evenly;
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -266,6 +288,7 @@ label span:nth-child(3) {
   
   .logo-rodape{
     display: flex;
+    margin-top: 20px;
   }
   
   .sobre .container-sobre{
@@ -273,6 +296,7 @@ label span:nth-child(3) {
   }
   .container {
     display: flex;
+    justify-content: center;
   }
   .menu-links {
     display: flex;
@@ -283,7 +307,6 @@ label span:nth-child(3) {
   
   .menu-links ul{
     list-style: none;
-    
     display: flex;
     flex-direction: column;
   }
@@ -301,17 +324,16 @@ label span:nth-child(3) {
     align-items: center;
     flex-wrap: nowrap;
   }
-  .titulo-rodape ul
-  {
-  display: flex;
-  height: 50px;
-  width: 100%;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+
+  .titulo-rodape ul{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
-  
   
   footer .rodape{
     display: flex;
@@ -322,495 +344,453 @@ label span:nth-child(3) {
     padding: 10px;
     
   }
-/* responsivo */
-  
-  /* Celular */
-  @media only screen and (max-width: 550px) {
-    nav {
-      position: absolute;
-    }
-    .colored {
-      transform: translateY(5%);
-    }
-    .menu .servico {
-      display: none;
-    }
-    .menu li > a {
-      display: none;
-    }
-    .nav-toggle {
-      width: 80%;
-      height: 24px;
-      display: flex;
-    }
 
-    #nav1 {
-      width: 20%;
-      height: 36px;
-      display: flex;
-      transform: translateX(180%) translateY(30%);
-    }
-  
-    #nav1.active #menu {
-      height: calc(100vh - 70px);
-      visibility: visible;
-       overflow-y: visible;
-    }
-  
-  
-  
-    #menu{
-      margin-top: 22px;
-      transform: translateX(-17%);
-      overflow-y: auto;
-    }
-  
-    #menu a {
-      padding: 1rem 0;
-      margin: 0 1rem;
-      border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-      color: #fff;
-      text-decoration: none;
-    }
-  
-    #checkbox-menu label{
-      display: flex;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      border: none;
-      background: none;
-      cursor: pointer;
-      gap: 0.5rem;
-    }
-  
-   #menu li {
-    background: #444;
-   }
-  
-    #header .logo img {
-      max-width: 100%;
-    }
-  
-    .imagem_de_fundo {
-      width: 100%;
-      display: flex;
-    }
-  
-    .slogan {
-      width: 100%;
-      height: 40vh;
-      flex-direction: column-reverse;
-      margin-top: 15%;
-      margin-left: -5%;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .slogan p {
-      width: 50%;
-      font-size: 24px;
-      margin-top: 5px;
-    }
-  
-    .slogan img {
-      width: 60%;
-      border-radius: 15px;
-    }
+  /*-----------------------------------------------*/
 
-    .logo img{
-      width: 100%;
-      height: 100%;
-      
-    }
-   
-    #container-servico_1  {
-      display: flex;
-      flex-direction: column;
-    }
+@media screen and (min-width: 320px) and (max-width: 480px) {
 
-    #container-servico_2  {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
-    #container-servico_3  {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #container-servico_4  {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
-    #container-servico_5  {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #container-servico_6  {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
-    #container-servico_7  {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #container-servico_8  {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-    .descricao_servico{
-      width: 100%;
-      margin-top: 15px;
-    }
+  .menu .servico {
+    display: none;
   }
-  /* Tablet */
-  @media only screen and (min-width: 550px) {
-    .menu .servico {
-      display: none;
-    }
-    .menu li > a {
-      display: none;
-    }
-    .nav-toggle {
-      width: 10%;
-      height: 24px;
-      display: flex;
-    }
-  
-    .slogan {
-      font-size: 64px;
-      color: #eee;
-      width: 50%;
-      gap: 20px;
-      transform: translateX(20%) translateY(80%);
-    }
-  
-    .slogan img {
-      max-width: 320px;
-    }
 
-    .logo img{
-      width: 70%;
-      height: 80%;
-      
-    }
-
-    #nav1 {
-      width: 12%;
-      height: 30px;
-      display: flex;
-      transform: translateX(350%) translateY(40%);
-    }
-  
-    #nav1.active #menu {
-      height: calc(100vh - 70px);
-      visibility: visible;
-       overflow-y: visible;
-    }
-  
-   
-  
-    #menu{
-      margin-top: 29px;
-      transform: translateX(-10%);
-      overflow-y: auto;
-    }
-  
-    #menu a {
-      padding: 1rem 0;
-      margin: 0 1rem;
-      border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-      color: #fff;
-      text-decoration: none;
-    }
-  
-    #checkbox-menu label{
-      display: flex;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      border: none;
-      background: none;
-      cursor: pointer;
-      gap: 0.5rem;
-    }
-  
-   #menu li {
-    background: #444;
-   }
-  
-    #container-servico_1,#container-servico_3, #container-servico_5,#container-servico_7    {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #container-servico_2,  #container-servico_4, #container-servico_6, #container-servico_8  {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
-    .descricao_servico{
-      width: 100%;
-      margin-top: 15px;
-      font-size: 18px;
-    }
+  .menu li > a {
+    display: none;
   }
-  /* NOTBOOK PEQUENO */
-  @media only screen and (min-width: 992px) {
-    #nav1{
-      display: none;
-    }
-    .menu .servico {
-      display: flex;
-       padding: 0.5rem 1rem; 
-      color: rgb(68, 68, 68);
-      text-decoration: none;
-       align-items: center; 
-      cursor: pointer;
-    }
-    .menu li > a {
-      display: flex;
-      padding: 0.5rem 1rem;
-      color: white;
-      text-decoration: none;
-      justify-content: flex-start;
-      align-items: center;
-    }
-  
-    .sub{
-      transform: translateX(-25%) translateY(55%);
-    }
-  
-    .nav-toggle {
-      display: none;
-    }
-  
-    .container-slogan {
-      display: flex;
-      justify-content: center;
-    }
-    .slogan {
-      font-size: 64px;
-      color: #eee;
-      width: 50%;
-      gap: 20px;
-      transform: translateX(-15%) translateY(5%);
-    }
-    .slogan p {
-      margin: 10% 10%;
-    }
-  
-    .slogan img {
-      max-width: 340px;
-      max-height: 240px;
-      flex-shrink: 0;
-      margin-top: 40px;
-      border-radius: 15px;
-    }
 
-    #container-servico_1, #container-servico_2, #container-servico_3, #container-servico_4, #container-servico_5, #container-servico_6, #container-servico_7, #container-servico_8{
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      justify-content: space-evenly;
-      padding: 5%;
-    }
-    /* img{
-    
-      width: 100%;
-    } */
-  
-    #container-servico_1, #container-servico_3, #container-servico_5, #container-servico_7{
-      background-color: #f7e9b436;
-    }
-  
-    .titulo_saiba_mais h3{
-      text-align: center;
-    }
-  
-    .descricao p{
-      text-align: justify;
-    }
-  
-    .descricao_servico{
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .descricao_servico{
-      width: 35%;
-    }
-  
-    /* p, h3{
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    } */
-    section#menu-baixo {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      height: 250px;
-      justify-content: space-evenly;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-    }
-    .menu-links {
-      display: flex;
-      justify-content: center;
-      width: 20%;
-      margin-top: 2%;
-    }
-    .titulo-rodape {
-      display: flex;
-  
-      justify-content: flex-end;
-    }
-  }
-  /* NOTBOOK MEDIO */
-  @media only screen and (min-width: 1440px) {
-
-    .slogan {
-      font-size: 64px;
-      color: #eee;
-      width: 50%;
-    }
-  
-    .container-slogan {
-      display: flex;
-      justify-content: center;
-    }
-    .slogan {
-      display: flex;
-      align-items: center;
-      margin-left: 25%;
-      font-size: 64px;
-      color: #eee;
-      width: 100%;
-    }
-    .slogan p {
-      margin: 10% 15%;
-    }
-    .slogan img {
-      width: 340px;
-      height: 240px;
-      flex-shrink: 0;
-      margin-top: 40px;
-      border-radius: 15px;
-    }
-    .logo img{
-      width: 50%;
-      height: 10%;
-      
-    }
-  
-  section#menu-baixo{
+  .nav-toggle {
+    width: 10%;
+    height: 24px;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 250px;
-    justify-content: space-evenly;
-  
   }
-  .container{
-    display: flex;
-    flex-direction: column;
-  }
-  .menu-links{
-    display: flex;
-    justify-content: center;
+
+  #nav1 {
     width: 20%;
-    margin-top: 2%;
-  }
-  .titulo-rodape{
+    height: 36px;
     display: flex;
-    
-    justify-content: flex-end;
-  }
+    transform: translateX(180%) translateY(50%);
   }
 
-  @media only screen and (min-width: 1680px) {
-    .container-slogan {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-    .slogan {
-      display: flex;
-      align-items: center;
-      font-size: 64px;
-      color: #eee;
-      width: 65%;
-    }
-    .slogan p {
-      display: flex;
-      margin: 15% 10%;
-      align-items: flex-start;
-    }
-    .slogan img {
-      width: 340px;
-      height: 240px;
-      flex-shrink: 0;
-      margin-top: 40px;
-      border-radius: 15px;
-    }
+  #nav1.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: visible;
   }
-  
-  /* FULL HD*/
-  
-  @media only screen and (min-width: 1920px) {
-    nav {
-      transform: translateY(100%);
-    }
-    .container-slogan {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-    .slogan {
-      display: flex;
-      align-items: center;
-      font-size: 64px;
-      color: #eee;
-      width: 100%;
-    }
-    .slogan p {
-      width: 40%;
-      margin: 10% 10%;
-    }
-    .slogan img {
-      width: 540px;
-      height: 340px;
-      flex-shrink: 0;
-      margin-top: 40px;
-      border-radius: 15px;
-    }
-  
-  section#menu-baixo{
+
+  #menu{
+    margin-top: 22px;
+    transform: translateX(-17%);
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #checkbox-menu label{
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 250px;
-    justify-content: space-evenly;
-  
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
   }
-  .container{
+
+  #menu li {
+    background: #444;
+  }
+
+  .imagem_de_fundo {
+    width: 100%;
+    display: flex;
+  }
+
+  .slogan {
+    width: 100%;
+    flex-direction: column-reverse;
+    margin-top: 15%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slogan img {
+    width: 200px;
+    padding-bottom: 15px;
+  }
+
+  .slogan p {
+    width: 50%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #container-servico_1, #container-servico_3, #container-servico_5,  #container-servico_7{
     display: flex;
     flex-direction: column;
   }
-  .menu-links{
+
+  #container-servico_2, #container-servico_4, #container-servico_6, #container-servico_8  {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #imagem_servico_1, #imagem_servico_2, #imagem_servico_3, #imagem_servico_4, #imagem_servico_5, #imagem_servico_6, #imagem_servico_7, #imagem_servico_8{
     display: flex;
     justify-content: center;
-    width: 40%;
+    align-items: center;
   }
-  .titulo-rodape{
+
+  .descricao_servico{
+    width: 90%;
+  } 
+
+  #menu-baixo{
+    height: 450px;
+    width: 100%;
     display: flex;
-    
-    justify-content: flex-end;
+    background-color: #1e1e1e;
+    color: #fff;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
   }
+}
+
+  /*-----------------------------------------------*/
+
+@media only screen and (min-width: 481px) and (max-width: 767.9px) {
+
+  .logo img {
+    width: 250px;
   }
+
+  .menu .servico {
+    display: none;
+  }
+
+  .menu li > a {
+    display: none;
+  }
+
+  .nav-toggle {
+    width: 10%;
+    height: 24px;
+    display: flex;
+  }
+
+  #nav1 {
+    width: 20%;
+    height: 36px;
+    display: flex;
+    transform: translateX(180%) translateY(50%);
+  }
+
+  #nav1.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: visible;
+  }
+
+  #menu{
+    margin-top: 22px;
+    transform: translateX(-17%);
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #checkbox-menu label{
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #menu li {
+    background: #444;
+  }
+
+  .imagem_de_fundo {
+    width: 100%;
+    display: flex;
+  }
+
+  .slogan {
+    width: 100%;
+    flex-direction: column-reverse;
+    margin-top: 11%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slogan img {
+    width: 200px;
+    padding-bottom: 20px;
+  }
+
+  .slogan p {
+    width: 50%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #container-servico_1, #container-servico_3, #container-servico_5,  #container-servico_7{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #container-servico_2, #container-servico_4, #container-servico_6, #container-servico_8  {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #imagem_servico_1, #imagem_servico_2, #imagem_servico_3, #imagem_servico_4, #imagem_servico_5, #imagem_servico_6, #imagem_servico_7, #imagem_servico_8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .descricao_servico{
+    width: 90%;
+  } 
+
+  #menu-baixo{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    background-color: #1e1e1e;
+    color: #fff;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+}
+
+  /*-----------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  
+  .logo img {
+    width: 300px;
+  }
+
+  .menu .servico {
+    display: none;
+  }
+
+  .menu li > a {
+    display: none;
+  }
+
+  .nav-toggle {
+    width: 10%;
+    height: 24px;
+    display: flex;
+  }
+
+  #nav1 {
+    width: 20%;
+    height: 36px;
+    display: flex;
+    transform: translateX(180%) translateY(50%);
+  }
+
+  #nav1.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: visible;
+  }
+
+  #menu{
+    margin-top: 22px;
+    transform: translateX(-17%);
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #checkbox-menu label{
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #menu li {
+    background: #444;
+  }
+
+  .imagem_de_fundo {
+    width: 100%;
+    display: flex;
+  }
+
+  .slogan {
+    width: 100%;
+    margin-top: 9%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .slogan img {
+    width: 250px;
+  }
+
+  .slogan p {
+    font-size: 25px;
+    text-align: left;
+  }
+
+  #container-servico_1, #container-servico_3, #container-servico_5,  #container-servico_7{
+    display: flex;
+    flex-direction: column
+  }
+
+  #container-servico_2, #container-servico_4, #container-servico_6, #container-servico_8  {
+    display: flex;
+    flex-direction: column-reverse
+  }
+
+  #imagem_servico_1, #imagem_servico_2, #imagem_servico_3, #imagem_servico_4, #imagem_servico_5, #imagem_servico_6, #imagem_servico_7, #imagem_servico_8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .descricao_servico{
+    width: 90%;
+  } 
+
+  #menu-baixo{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    background-color: #1e1e1e;
+    color: #fff;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+}
+
+/*-----------------------------------------------*/
+
+@media only screen and (min-width: 1281px){
+ 
+  .logo img {
+    width: 300px;
+  }
+
+  .logo-rodape{
+    margin-top: 20px;
+  }
+
+  .nav-toggle {
+    width: 10%;
+    height: 24px;
+    display: flex;
+  }
+
+  #nav1.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: visible;
+  }
+
+  #menu{
+    margin-top: 22px;
+    transform: translateX(-17%);
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #checkbox-menu label{
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #menu li {
+    background: #444;
+  }
+
+  .imagem_de_fundo {
+    width: 100%;
+    display: flex;
+  }
+
+  .slogan {
+    width: 100%;
+    margin-top: 9%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .slogan img {
+    width: 350px;
+  }
+
+  .slogan p {
+    font-size: 36px;
+    text-align: left;
+  }
+
+  #container-servico_1, #container-servico_2, #container-servico_3, #container-servico_4, #container-servico_5, #container-servico_6, #container-servico_7, #container-servico_8{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  #container-servico_1, #container-servico_3, #container-servico_5, #container-servico_7{
+    background-color: #f7e9b436;
+  }
+
+  .descricao_servico{
+    width: 50%;
+  } 
+
+}
