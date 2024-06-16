@@ -405,8 +405,68 @@ section#serviços .cartão-serviços .serviço_card .serviço-imagem img {
   color: #ffc700;
   transform: scale(1.02);
   cursor: pointer;
+} 
+
+.accordion {
+  width: 800px;
+  margin: 10px auto;
+  color: black;
+  background-color: white;
+  padding: 45px 45px;
 }
 
+.accordion .container {
+  position: relative;
+  flex-direction: column;
+  margin: 10px 10px;
+}
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.container.active:hover i{
+  transform: rotate(180deg);
+ 
+}
+
+.container.active i{
+  transition: all 0.3s ease;
+  
+}
+
+.container:hover i {
+  transition: all 0.3s ease;
+}
+
+.accordion .content  {
+  position: relative;
+  background: white;
+  height: 0;
+  font-size: 16px;
+  text-align: justify;
+  width: 700px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+
+.accordion hr {
+  width: 100;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+
+.accordion .container.active .content {
+  height: auto;
+}
+
+ 
 .show {
   opacity: 1;
   transform: translateX(0%);
@@ -608,6 +668,36 @@ footer .rodape{
     width: 100%;
     cursor: pointer;
   }
+  .accordion {
+    width: 102%;
+  }
+  .accordion .content  {
+    width: 300px;
+  }
+  .container i {
+    position: absolute;
+  }
+  .container.active i{
+    /* position: absolute; */
+    transition: all 0.3s ease;
+    
+  }
+   .accordion .container {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+
+  } 
+
+  .accordion .label {
+    /* margin-left: 200px; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
 
   #menu-baixo{
     height: 450px;
