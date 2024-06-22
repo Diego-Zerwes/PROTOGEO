@@ -413,6 +413,7 @@ section#serviços .cartão-serviços .serviço_card .serviço-imagem img {
   color: black;
   background-color: white;
   padding: 45px 45px;
+  font-family: poppins;
 }
 
 .accordion .container {
