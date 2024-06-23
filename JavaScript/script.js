@@ -117,3 +117,12 @@ for (i=0; i<accordion.length; i++) {
     this.classList.toggle('active')
   })
 }
+
+
+const faqs = document.querySelectorAll(".perguntasFrequentes");
+
+faqs.forEach(perguntasFrequentes => {
+  perguntasFrequentes.addEventListener("click", () => {
+    perguntasFrequentes.classList.toggle("active");
+  });
+});

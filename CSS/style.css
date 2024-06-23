@@ -407,71 +407,65 @@ section#serviços .cartão-serviços .serviço_card .serviço-imagem img {
   cursor: pointer;
 } 
 
-.accordion {
-  width: 800px;
-  margin: 10px auto;
-  color: black;
-  background-color: white;
-  padding: 45px 45px;
-  font-family: poppins;
-}
 
-.accordion .container {
-  position: relative;
+#FAQ {
+  color: #925c27;
+  /*min-height: 100vh;*/
+  width: 80%;
+  padding-bottom: 5rem;
+  margin: 0 auto;
+  display: flex;
   flex-direction: column;
-  margin: 10px 10px;
+  align-items: center;
 }
 
-.accordion .label {
-  position: relative;
-  padding: 10px 0;
-  font-size: 20px;
-  color: black;
+.titleFAQ {
+  font-size: 3rem;
+  margin: 2rem 0rem;
+}
+
+.perguntasFrequentes {
+  max-width: 700px;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #925c27;
   cursor: pointer;
+}
+
+.pergunta {
   display: flex;
   justify-content: space-between;
-}
-.container.active:hover i{
-  transform: rotate(180deg);
- 
+  align-items: center;
 }
 
-.container.active i{
-  transition: all 0.3s ease;
-  
+.pergunta h3 {
+  font-size: 1.5rem;
 }
 
-.container:hover i {
-  transition: all 0.3s ease;
-}
-
-.accordion .content  {
-  position: relative;
-  background: white;
-  height: 0;
-  font-size: 16px;
-  text-align: justify;
-  width: 700px;
+.resposta {
+  max-height: 0;
   overflow: hidden;
-  transition: 0.5s;
+  transition: max-height 1.3s ease;
 }
 
-
-.accordion hr {
-  width: 100;
-  margin-left: 0;
-  border: 1px solid grey;
+.resposta p {
+  padding-top: 1rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
 }
 
-.accordion .container.active .content {
-  height: auto;
+.perguntasFrequentes.active .resposta {
+  max-height: 300px;
 }
 
- 
-.show {
-  opacity: 1;
-  transform: translateX(0%);
-  filter:blur(0px);
+.seta {
+  transition: transform 0.3s ease;
+  margin-left: 10px; 
+}
+
+.perguntasFrequentes.active .seta {
+  transform: rotate(180deg);
 }
 
 /*-----------------------------------------------*/
