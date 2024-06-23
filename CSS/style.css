@@ -371,10 +371,8 @@ section#serviços .cartão-serviços .serviço_card .serviço-imagem img {
 }
 
 #texto {
-  
   font-family: poppins;
   padding: 0% 5%;
-  
 }
 
 .titulo-orcamento {
@@ -382,19 +380,11 @@ section#serviços .cartão-serviços .serviço_card .serviço-imagem img {
   color: #ededed;
 }
 
-#imagem-orcamento{
-  padding-right: 0%;
-}
-
 .subtitulo-orcamento {
   position: relative;
   font-size: 18px;
   color: #ededed;
   padding: 3% 0%;
-}
-
-#botao{
-  padding: 0% 5%;
 }
 
 #botao button {

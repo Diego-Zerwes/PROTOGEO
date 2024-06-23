@@ -126,3 +126,17 @@ faqs.forEach(perguntasFrequentes => {
     perguntasFrequentes.classList.toggle("active");
   });
 });
+
+
+
+const popUp = document.getElementById("pop-up")
+const modal = document.getElementById("dialog")
+const botaoFechar = document.getElementById("botao-fechar")
+
+popUp.onclick =  function(){
+  modal.showModal()
+}
+
+botaoFechar.onclick = function(){
+  modal.close()
+}
