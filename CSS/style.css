@@ -312,6 +312,16 @@ section#serviços .cartão-serviços .serviço_card .serviço-imagem img {
   cursor: pointer;
 }
 
+a{
+  text-decoration: none;
+  color: #72601f;
+}
+a:hover{
+  color: #ffc700;
+  
+}
+
+
 .cartão-serviços .serviço_fundo {
   display: flex;
   flex-wrap: wrap;

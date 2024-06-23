@@ -39,8 +39,8 @@ O sistema deve destacar os principais benifícios, características ou produtos/
 RF03 - Imagens atraentes
 O sistema deve utilizar conteúdo visual de alta qualidade para atrair e manter o interesse dos visitantes.
 
-RF04 - Avaliações
-O sistema deve apresentar depoimentos de clientes satisfeitos para aumentar a credibilidade.
+RF04 - FAQ
+O sistema deve utilizar o conceito de faq para as perguntas frequentes.
 
 RF05 - Integração com Redes Sociais
 O sistema deve incluir ícones para as redes sociais da empresa.
