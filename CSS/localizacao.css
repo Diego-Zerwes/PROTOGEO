@@ -1,5 +1,4 @@
 * {
-  margin: 0;
   padding: 0;
   right: 0;
   box-sizing: border-box; 
@@ -351,8 +350,51 @@ input[type="radio"] {
   border-radius: 10px;
 }
 
-#enviar {
-  text-align: center;
+#termos-e-condicoes{
+  margin-bottom: 20%;
+  display: flex;
+}
+
+#termos-e-condicoes p{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
+  font-variation-settings: "slnt" 0;
+  color: #444444;
+}
+
+#dialog{
+  width: 70%;
+  border-radius: 10px;
+  margin-left: 15%;
+  margin-top: 5%;
+  padding: 5%;
+}
+
+#texto-popUp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
+}
+
+#botao-fechar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#enviar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#botao{
+  justify-content: center;
+  align-items: center;
 }
 
 button {
@@ -365,7 +407,6 @@ button {
   border-radius: 15px;
   transform: scale(1);
   transition: all 0.4s ease-in-out;
-  text-align: center;
   box-shadow: 0px 4px 8px #444444;
   cursor: pointer;
 }
@@ -583,6 +624,7 @@ footer .rodape{
     width: 95%;
   }
 
+  
   .nome-form input,
   .email-form input,
   .telefone-form input {
