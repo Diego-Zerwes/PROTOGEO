@@ -4,7 +4,7 @@ Projeto integrador
 
 <p align="center">
 
-  <img src="imagens/logo-.png" alt=" Projeto integrador" src="" width="200" height="200">
+  <img src="imagens/logo-.png" alt=" Projeto integrador">
 
 
 </p>
