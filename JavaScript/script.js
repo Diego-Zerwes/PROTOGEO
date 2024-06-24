@@ -17,22 +17,6 @@ function escondeSub(sub,protogeo){
   subfilho.style.display = 'none'; 
 }
 
-// function mostraNavBar(navBar){
-//   subfilho = document.getElementById(navBar);
-//   subfilho.style.display = 'block';
-// }
-
-// function esconderNavBar(navBar){
-//   subfilho = document.getElementById(navBar);
-//   subfilho.style.display = 'none'; 
-// }
-// const btnMobile = document.getElementById('checkbox-menu');
-// function toggleMenu(){
-//   const btnMobile = document.getElementById('nav1');
-//   nav.classList.toggle('active');
-// }
-
-// btnMobile.addEventListener('click',toggleMenu);
 
 const btnMobile = document.getElementById('checkbox-menu');
 
@@ -44,7 +28,6 @@ function toggleMenu(event) {
   const active = nav.classList.contains('active');
   event.currentTarget.classList.toggle('active');
 
-  //event.currentTarget.setAttribute('aria-expanded', active);
   if (active) {
     event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
   } else {
@@ -53,11 +36,9 @@ function toggleMenu(event) {
 }
 
 btnMobile.addEventListener('click', toggleMenu);
-//btnMobile.addEventListener('touchstart', toggleMenu);
 
 
 const hiddenElements = document.querySelectorAll(".hidden");
-// const animeElements = document.querySelectorAll(".anime");
 
 const intersectionObserver = new IntersectionObserver((entries)=>{
   entries.forEach((entry)=>{
