@@ -68,6 +68,7 @@ possui. Seção destinada para explicar “O que é Topografia?”.
 
 <h3 align = "center"> Requisitos não funcionais </h3>
 <p align = "center">
+  
   RNF01- Compatibilidade com navegadores: O sistema deve ser compatível nos navegadores: Chrome, Safari, Opera, Firefox, EDGE.
   
   RNF02 – Responsividade: O sistema deve permitir ser responsivo para suportar dispositivo mobile. 
@@ -77,6 +78,7 @@ possui. Seção destinada para explicar “O que é Topografia?”.
   RNF04 - Imagens atraentes: O sistema deve utilizar conteúdo visual de alta qualidade para atrair e manter o interesse dos visitantes.
   
   RNF05 – Internacionalização: O sistema deve conter os seguintes idiomas: inglês, português e espanhol.
+  
 </p>
 
 <h3 align="center">Tecnologias</h3>
