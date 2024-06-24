@@ -40,7 +40,7 @@ RF03 - Imagens atraentes
 O sistema deve utilizar conteúdo visual de alta qualidade para atrair e manter o interesse dos visitantes.
 
 RF04 - FAQ
-O sistema deve utilizar o conceito de faq para as perguntas frequentes.
+O sistema deve incorporar uma sessão de Perguntas Frequentes (FAQ) para fornecer respostas rápidas e eficientes às dúvidas mais comuns dos usuários.
 
 RF05 - Integração com Redes Sociais
 O sistema deve incluir ícones para as redes sociais da empresa.
@@ -54,7 +54,7 @@ O sistema deve integrar ferramentas de marketing como por exemplo, o Google Anal
 Para acompanhar e atualizar o desempenho.
 
 RF08 - Termos e condições
-O sistema deve incluir links para políticas de privacidade e termos de uso.
+O sistema deve incluir um redirecionamento para as políticas de privacidade e termos de uso no formulário de contato.
 
 RF09 - Seção Sobre Nós
 O sistema deve incluir uma seção contendo história da empresa para dar credibilidade ao
@@ -71,5 +71,4 @@ possui. Seção destinada para explicar “O que é Topografia?”.
 <p align="center">
 <h3>Tecnologias</h3>
 
-Por enquanto usaremos html e css. Ao longo da jornada adicionaremos mais tecnologias como js,boostrap e google analytics.
-</p>
+Utilizamos HTML, CSS e JavaScript para o desenvolvimento do sistema, garantindo uma interface interativa e responsiva. Além disso, empregamos o Google Analytics como ferramenta de marketing para monitorar e analisar o comportamento dos usuários, aprimorando continuamente a experiência e a eficácia do sistema.</p>
